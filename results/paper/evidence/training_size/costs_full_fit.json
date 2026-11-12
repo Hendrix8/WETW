@@ -1,0 +1,26 @@
+{
+ "audiomnistds": {
+  "complete": true,
+  "smoke": false,
+  "dataset": "audiomnistds",
+  "generator": "light_mlp",
+  "generator_parameters": 65792,
+  "epoch": 245,
+  "wall_hours": 0.583910283115175,
+  "reference_config_sha256": "38debf3fc88ac61de7f7a147bc3c8b56415ece29490f4ace6b0f28d0705af34b",
+  "source": "result.json",
+  "gpu": "A100"
+ },
+ "lendb": {
+  "complete": true,
+  "smoke": false,
+  "dataset": "lendb",
+  "generator": "light_mlp",
+  "generator_parameters": 65792,
+  "epoch": 289,
+  "wall_hours": 0.08472067534923554,
+  "reference_config_sha256": "8a0bdb4f2e8572d3557dfb7a90aea71af94dffec3966efd0bf803711e9a9599b",
+  "source": "result.json",
+  "gpu": "A100"
+ }
+}

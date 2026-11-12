@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_w01_seismic",
+ "frozen_lab": "abl3_rfdtan4_v2_w01_seismic",
+ "lab": "er_abl3_rfdtan4_v2_w01_seismic",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.044574477724368906,
+ "recall1_2pct": 0.92,
+ "recall10_2pct": 0.8639999999999999
+}

@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\caption{Objective ablations. Cells show mean $|\mathrm{RE}|$ / recall@1 at a 2\% shortlist. Bold marks the best value per encoder group and measure, including ties.}
+\label{tab:components}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llccc@{}}
+\toprule
+Encoder & Distance & Native & $\mathcal{L}_{\mathrm{WD}}$ & $\mathcal{L}$ \\
+\midrule
+\textsc{WESee} & Euclidean & -- & 0.24\,/\,0.66\se{0.01} & 0.11\,/\,0.85\se{0.01} \\
+ & \textsc{WETW} & -- & \textbf{0.04}\,/\,0.79\se{0.01} & 0.05\,/\,\textbf{0.95}\se{0.01} \\
+\midrule
+RF-DTAN & Euclidean & 0.57\,/\,0.36\se{0.02} & 0.21\,/\,0.52\se{0.01} & 0.22\,/\,0.58\se{0.01} \\
+ & \textsc{WETW} & -- & \textbf{0.07}\,/\,0.61\se{0.02} & 0.08\,/\,\textbf{0.82}\se{0.01} \\
+\midrule
+NeuTS & Euclidean & 0.31\,/\,0.05\se{0.01} & 0.37\,/\,0.04\se{0.01} & 0.35\,/\,0.07\se{0.01} \\
+ & \textsc{WETW} & -- & \textbf{0.18}\,/\,0.06\se{0.01} & 0.19\,/\,\textbf{0.10}\se{0.01} \\
+\midrule
+CDPS & Euclidean & 0.24\,/\,0.38\se{0.02} & 0.24\,/\,0.36\se{0.02} & 0.24\,/\,0.36\se{0.02} \\
+ & \textsc{WETW} & -- & \textbf{0.11}\,/\,0.36\se{0.02} & 0.13\,/\,\textbf{0.52}\se{0.02} \\
+\midrule
+LDPS & Euclidean & 0.17\,/\,0.49\se{0.02} & 0.16\,/\,0.50\se{0.02} & 0.16\,/\,0.50\se{0.02} \\
+ & \textsc{WETW} & -- & \textbf{0.08}\,/\,0.50\se{0.02} & 0.09\,/\,\textbf{0.69}\se{0.02} \\
+\midrule
+NeuralWarp$^{\dagger}$ & Own network & 0.54\,/\,0.06\se{0.01} & \textbf{0.09}\,/\,0.31\se{0.01} & 0.10\,/\,\textbf{0.51}\se{0.02} \\
+\midrule
+Average & Euclidean & 0.32\,/\,0.32\se{0.01} & 0.25\,/\,0.42\se{0.01} & 0.22\,/\,0.47\se{0.02} \\
+ & \textsc{WETW} & -- & \textbf{0.10}\,/\,0.47\se{0.01} & 0.11\,/\,\textbf{0.62}\se{0.01} \\
+\bottomrule
+\end{tabular*}
+\par\smallskip{\footnotesize\raggedright $^{\dagger}$NeuralWarp uses its own distance and is excluded from averages.\par}
+\end{table}

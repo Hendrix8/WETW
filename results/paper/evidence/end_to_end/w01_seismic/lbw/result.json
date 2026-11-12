@@ -1,0 +1,30 @@
+{
+  "method": "lbw",
+  "lab": "w01_seismic",
+  "seconds_mean": 5.840834,
+  "cascade": {
+    "mode": "lbw",
+    "pruned_webb": 0.276726,
+    "limit": 840000,
+    "N": 840000,
+    "L": 256,
+    "r": 24,
+    "wfrac": 0.1,
+    "k": 10,
+    "n_queries": 20,
+    "load_s": 0.31,
+    "db_envelope_s": 10.462,
+    "sec_per_query_mean": 5.840834,
+    "sec_per_query_min": 0.562735,
+    "sec_per_query_max": 7.852489,
+    "qps": 0.1712,
+    "pruned_kim": 0.0,
+    "pruned_keogh_eq": 0.0,
+    "pruned_keogh_ec": 0.0,
+    "dtw_computed": 0.723274,
+    "dtw_completed_improving": 0.00014327
+  },
+  "rel_err": 0.0,
+  "exact_usp_seconds": 6.034614,
+  "queries": 20
+}

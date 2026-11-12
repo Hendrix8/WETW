@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_audiomnistds",
+ "frozen_lab": "abl3_rfdtan4_v2_audiomnistds",
+ "lab": "er_abl3_rfdtan4_v2_audiomnistds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.0819476243672512,
+ "recall1_2pct": 0.95,
+ "recall10_2pct": 0.839
+}

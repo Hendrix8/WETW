@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_dreamera",
+  "method": "neuts",
+  "dataset": "dreamera",
+  "run": "dreamera",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "dreamera_q100.npy",
+  "oracle": "dreamera_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     20000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+   },
+   "valid": {
+    "shape": [
+     5000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+   },
+   "test": {
+    "shape": [
+     5000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+   },
+   "db": {
+    "shape": [
+     60000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+   },
+   "q": {
+    "shape": [
+     100,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+   }
+  },
+  "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+ },
+ "selected": {
+  "step": 3000,
+  "validation_recall_at_1": 0.11,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.22044005378106715,
+ "validation_scale": 0.0440824249814241,
+ "test_pairs": 19992,
+ "queries": 100,
+ "database": 60000,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.05,
+  "0.01": 0.12,
+  "0.02": 0.14,
+  "0.05": 0.24,
+  "0.1": 0.37
+ },
+ "recall_at_10": {
+  "0.005": 0.039000000000000014,
+  "0.01": 0.07399999999999998,
+  "0.02": 0.10099999999999994,
+  "0.05": 0.172,
+  "0.1": 0.265
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_dreamera",
+ "frozen_lab": "abl3_rfdtan4_v2_dreamera",
+ "lab": "er_abl3_rfdtan4_v2_dreamera",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.0735845332132268,
+ "recall1_2pct": 0.49,
+ "recall10_2pct": 0.413
+}

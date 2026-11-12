@@ -1,0 +1,27 @@
+# @package _global_
+smoke: true
+output: outputs/smoke
+training:
+  num_epoch: 3
+  encoder_pretrain_epochs: 1
+  encoder_joint_train_epochs: 1
+  size_batch: 8
+  max_wall_hours: 0.1
+dataset:
+  refine:
+    steps: 4
+    anchors: 8
+    hard_rank: 16
+encoder_ranking:
+  steps: 3
+refinement:
+  batch_size: 16
+  triplets: 8
+  pairs: 64
+  validation_every: 2
+search:
+  k: 3
+  rho_grid: [0.1, 0.5, 1.0]
+  validation_queries: 8
+  kappa_grid: [1, 2, 0]
+  query_limit: 4

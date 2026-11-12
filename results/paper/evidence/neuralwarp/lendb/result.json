@@ -1,0 +1,86 @@
+{
+  "method": "neuralwarp",
+  "lab": "lendb",
+  "N": 60000,
+  "paa": 1,
+  "wfrac": 0.1,
+  "curve": [
+    {
+      "rho": 0.005,
+      "recall_at_1": 0.18,
+      "recall_at_10": 0.11,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.0281654,
+      "seconds": 36.42743344730203
+    },
+    {
+      "rho": 0.01,
+      "recall_at_1": 0.24,
+      "recall_at_10": 0.18,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.0488938,
+      "seconds": 36.44816184730203
+    },
+    {
+      "rho": 0.02,
+      "recall_at_1": 0.34,
+      "recall_at_10": 0.284,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.0878092,
+      "seconds": 36.48707724730203
+    },
+    {
+      "rho": 0.05,
+      "recall_at_1": 0.51,
+      "recall_at_10": 0.462,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.19413765,
+      "seconds": 36.59340569730203
+    },
+    {
+      "rho": 0.1,
+      "recall_at_1": 0.66,
+      "recall_at_10": 0.62,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.3292662,
+      "seconds": 36.72853424730203
+    },
+    {
+      "rho": 0.2,
+      "recall_at_1": 0.82,
+      "recall_at_10": 0.793,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.54919885,
+      "seconds": 36.94846689730203
+    },
+    {
+      "rho": 0.3,
+      "recall_at_1": 0.92,
+      "recall_at_10": 0.9,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.7283977499999998,
+      "seconds": 37.12766579730203
+    },
+    {
+      "rho": 0.4,
+      "recall_at_1": 0.96,
+      "recall_at_10": 0.953,
+      "rank_s": 36.39926804730203,
+      "verify_s": 0.86102315,
+      "seconds": 37.26029119730203
+    },
+    {
+      "rho": 0.5,
+      "recall_at_1": 0.98,
+      "recall_at_10": 0.974,
+      "rank_s": 36.39926804730203,
+      "verify_s": 1.0189862499999998,
+      "seconds": 37.41825429730203
+    }
+  ],
+  "queries_recall": 100,
+  "queries_timed": 20,
+  "gpu": "NVIDIA A100",
+  "cpu": "one thread per query",
+  "checkpoint_note": "Validation-selected WarpDistill checkpoint; ranks on an A100 GPU, verification on the CPU timing server"
+}

@@ -1,0 +1,9 @@
+{
+ "key": "cdps_whalesounds",
+ "frozen_lab": "abl3_cdps_wd128_whalesounds",
+ "lab": "er_abl3_cdps_wd128_whalesounds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.1011747187212985,
+ "recall1_2pct": 0.67,
+ "recall10_2pct": 0.592
+}

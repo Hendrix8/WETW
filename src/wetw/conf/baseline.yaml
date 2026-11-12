@@ -1,0 +1,21 @@
+defaults:
+  - dataset: whalesounds
+  - _self_
+method: ldps
+objective: native
+data:
+  root: data
+output: outputs/baselines/${release.dataset}/${method}_${objective}
+device: cuda
+hours: 6.0
+max_steps: 2000000
+embedding_dim: 128
+fit_samples: 2000
+upstream:
+  rfdtan: null
+  neuts: null
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${output}/hydra

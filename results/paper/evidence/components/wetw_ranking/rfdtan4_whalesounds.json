@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_whalesounds",
+ "frozen_lab": "abl3_rfdtan4_v2_whalesounds",
+ "lab": "er_abl3_rfdtan4_v2_whalesounds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.051965167543533086,
+ "recall1_2pct": 0.88,
+ "recall10_2pct": 0.8340000000000001
+}

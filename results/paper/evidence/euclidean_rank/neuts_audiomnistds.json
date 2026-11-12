@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_audiomnistds",
+  "method": "neuts",
+  "dataset": "audiomnistds",
+  "run": "audiomnistds",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "audiomnistds_q100.npy",
+  "oracle": "audiomnistds_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     5000,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+   },
+   "valid": {
+    "shape": [
+     2000,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+   },
+   "test": {
+    "shape": [
+     2000,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+   },
+   "db": {
+    "shape": [
+     20900,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+   },
+   "q": {
+    "shape": [
+     100,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+   }
+  },
+  "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+ },
+ "selected": {
+  "step": 0,
+  "validation_recall_at_1": 0.01,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.6142396398178698,
+ "validation_scale": 3.819980674528224e-05,
+ "test_pairs": 19991,
+ "queries": 100,
+ "database": 20900,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.0,
+  "0.01": 0.01,
+  "0.02": 0.03,
+  "0.05": 0.07,
+  "0.1": 0.13
+ },
+ "recall_at_10": {
+  "0.005": 0.006999999999999999,
+  "0.01": 0.017000000000000005,
+  "0.02": 0.031000000000000014,
+  "0.05": 0.06599999999999996,
+  "0.1": 0.11399999999999988
+ }
+}

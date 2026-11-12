@@ -1,0 +1,54 @@
+defaults:
+  - dataset: whalesounds
+  - _self_
+  - study: paper
+
+data:
+  root: data
+output: outputs/${release.dataset}
+device: cpu
+threads: 1
+stage: all
+resume: true
+smoke: false
+checkpoint: null
+head: mlp_w
+head_rank: null  # lowrank head: null = full rank d (paper Table IV full-matrix measure)
+objective: ranking
+variant: full
+# Encoder and generator optimizer. adamw (default) trains both with AdamW, which gave higher validation recall than
+# SGD in an optimizer-only swap; preset keeps each dataset preset's archived optimizer (SGD + Adam on the five
+# long-series presets), as used for the paper models.
+optimizer: adamw
+reference_layout: ${release.reference_layout}
+search:
+  k: 10
+  # kappa: prefilter size kappa * rho * N; 0 = rescore the whole database, 1 = Euclidean shortlist.
+  # Chosen per shortlist fraction on validation (smallest kappa within kappa_tolerance of the best).
+  kappa_grid: [1, 2, 3, 5, 10, 20, 0]
+  kappa_tolerance: 0.005
+  rho_grid: [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5]
+  validation_queries: 300
+  query_limit: null
+  baseline: true
+encoder_ranking:  # stage (iii), first half: Euclidean ranking refinement of the encoder
+  enabled: true
+  steps: 3000
+  lr: 0.0001
+refinement:
+  lr: 0.001
+  batch_size: 4096
+  triplets: 1024
+  pairs: 2000000
+  beta: 1.0
+  margin: 0.1
+  validation_every: 1000
+  warm_start: true
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${output}/hydra
+  sweep:
+    dir: multirun
+    subdir: ${hydra.job.num}

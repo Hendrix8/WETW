@@ -1,0 +1,9 @@
+{
+ "key": "neuts_audiomnistds",
+ "frozen_lab": "abl3_neuts_wd_v2_audiomnistds",
+ "lab": "er_abl3_neuts_wd_v2_audiomnistds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.38027217011816283,
+ "recall1_2pct": 0.04,
+ "recall10_2pct": 0.036000000000000004
+}

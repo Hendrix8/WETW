@@ -1,0 +1,5693 @@
+{
+ "retrieved_utc": "2026-11-09T21:53:46.198621+00:00",
+ "results": {
+  "ldps_audiomnistds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_audiomnistds",
+     "method": "ldps",
+     "dataset": "audiomnistds",
+     "run": "<internal>/devq_abl3_ldps_wd_audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.52,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.18389936719132818,
+    "validation_scale": 0.20056899305851636,
+    "test_pairs": 19991,
+    "queries": 100,
+    "database": 20900,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.63,
+     "0.01": 0.68,
+     "0.02": 0.76,
+     "0.05": 0.87,
+     "0.1": 0.93
+    },
+    "recall_at_10": {
+     "0.005": 0.44500000000000006,
+     "0.01": 0.5159999999999999,
+     "0.02": 0.601,
+     "0.05": 0.71,
+     "0.1": 0.779
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_audiomnistds",
+     "method": "ldps",
+     "dataset": "audiomnistds",
+     "run": "<internal>/devq_abl3_ldps_wd_audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999607,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.52,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_cornellwhalechallenge": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_cornellwhalechallenge",
+     "method": "ldps",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/devq_abl3_ldps_wd_cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.28,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.25174940727301237,
+    "validation_scale": 0.10380072416477928,
+    "test_pairs": 19994,
+    "queries": 100,
+    "database": 24500,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.31,
+     "0.01": 0.35,
+     "0.02": 0.4,
+     "0.05": 0.52,
+     "0.1": 0.64
+    },
+    "recall_at_10": {
+     "0.005": 0.26099999999999995,
+     "0.01": 0.3450000000000002,
+     "0.02": 0.44000000000000006,
+     "0.05": 0.5769999999999998,
+     "0.1": 0.6819999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_cornellwhalechallenge",
+     "method": "ldps",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/devq_abl3_ldps_wd_cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999800,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.28,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_dreamera": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_dreamera",
+     "method": "ldps",
+     "dataset": "dreamera",
+     "run": "<internal>/devq_abl3_ldps_wd_dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.21,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.08355620625579052,
+    "validation_scale": 0.3315823036076715,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.16,
+     "0.01": 0.23,
+     "0.02": 0.27,
+     "0.05": 0.38,
+     "0.1": 0.49
+    },
+    "recall_at_10": {
+     "0.005": 0.13899999999999993,
+     "0.01": 0.17999999999999997,
+     "0.02": 0.24499999999999997,
+     "0.05": 0.3690000000000002,
+     "0.1": 0.502
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_dreamera",
+     "method": "ldps",
+     "dataset": "dreamera",
+     "run": "<internal>/devq_abl3_ldps_wd_dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.21,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_fruitflies": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_fruitflies",
+     "method": "ldps",
+     "dataset": "fruitflies",
+     "run": "<internal>/abl3_ldps_wd_fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.56,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.17812930192182722,
+    "validation_scale": 0.23804240899974408,
+    "test_pairs": 19997,
+    "queries": 100,
+    "database": 26759,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.58,
+     "0.01": 0.67,
+     "0.02": 0.73,
+     "0.05": 0.86,
+     "0.1": 0.93
+    },
+    "recall_at_10": {
+     "0.005": 0.449,
+     "0.01": 0.553,
+     "0.02": 0.6509999999999999,
+     "0.05": 0.8009999999999999,
+     "0.1": 0.8879999999999998
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_fruitflies",
+     "method": "ldps",
+     "dataset": "fruitflies",
+     "run": "<internal>/abl3_ldps_wd_fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.56,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_lendb": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_lendb",
+     "method": "ldps",
+     "dataset": "lendb",
+     "run": "<internal>/devq_abl3_ldps_wd_lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.42,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.14893590767373907,
+    "validation_scale": 0.3695822249883735,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.34,
+     "0.01": 0.49,
+     "0.02": 0.62,
+     "0.05": 0.78,
+     "0.1": 0.88
+    },
+    "recall_at_10": {
+     "0.005": 0.2780000000000001,
+     "0.01": 0.4020000000000002,
+     "0.02": 0.5429999999999999,
+     "0.05": 0.7299999999999999,
+     "0.1": 0.8730000000000001
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_lendb",
+     "method": "ldps",
+     "dataset": "lendb",
+     "run": "<internal>/devq_abl3_ldps_wd_lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.42,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_mosquitosound": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_mosquitosound",
+     "method": "ldps",
+     "dataset": "mosquitosound",
+     "run": "<internal>/abl3_ldps_wd_mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.4,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.17978306523299645,
+    "validation_scale": 0.2158144307293037,
+    "test_pairs": 19999,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.37,
+     "0.01": 0.5,
+     "0.02": 0.63,
+     "0.05": 0.77,
+     "0.1": 0.85
+    },
+    "recall_at_10": {
+     "0.005": 0.31800000000000006,
+     "0.01": 0.42800000000000005,
+     "0.02": 0.5529999999999998,
+     "0.05": 0.7159999999999997,
+     "0.1": 0.8310000000000001
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_mosquitosound",
+     "method": "ldps",
+     "dataset": "mosquitosound",
+     "run": "<internal>/abl3_ldps_wd_mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999947,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.4,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_w01_seismic": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_w01_seismic",
+     "method": "ldps",
+     "dataset": "w01_seismic",
+     "run": "<internal>/devq_abl3_ldps_wd_w01_seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.53,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.10494183314481864,
+    "validation_scale": 0.3328113976288648,
+    "test_pairs": 19998,
+    "queries": 100,
+    "database": 840000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.28,
+     "0.01": 0.37,
+     "0.02": 0.44,
+     "0.05": 0.52,
+     "0.1": 0.65
+    },
+    "recall_at_10": {
+     "0.005": 0.204,
+     "0.01": 0.28400000000000003,
+     "0.02": 0.37000000000000016,
+     "0.05": 0.515,
+     "0.1": 0.6589999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_w01_seismic",
+     "method": "ldps",
+     "dataset": "w01_seismic",
+     "run": "<internal>/devq_abl3_ldps_wd_w01_seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999972,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.53,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "ldps_whalesounds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "ldps_whalesounds",
+     "method": "ldps",
+     "dataset": "whalesounds",
+     "run": "<internal>/devq_abl3_ldps_wd_whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.34,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.17812746286443182,
+    "validation_scale": 0.15692945849599058,
+    "test_pairs": 20000,
+    "queries": 100,
+    "database": 40000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.12,
+     "0.01": 0.15,
+     "0.02": 0.18,
+     "0.05": 0.22,
+     "0.1": 0.36
+    },
+    "recall_at_10": {
+     "0.005": 0.11,
+     "0.01": 0.142,
+     "0.02": 0.2,
+     "0.05": 0.29,
+     "0.1": 0.4050000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "ldps_whalesounds",
+     "method": "ldps",
+     "dataset": "whalesounds",
+     "run": "<internal>/devq_abl3_ldps_wd_whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999940,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.34,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_audiomnistds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_audiomnistds",
+     "method": "rfdtan4",
+     "dataset": "audiomnistds",
+     "run": "<internal>/audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.72,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.23318630559348774,
+    "validation_scale": 0.15957473361096117,
+    "test_pairs": 19991,
+    "queries": 100,
+    "database": 20900,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.56,
+     "0.01": 0.69,
+     "0.02": 0.84,
+     "0.05": 0.92,
+     "0.1": 0.97
+    },
+    "recall_at_10": {
+     "0.005": 0.39799999999999996,
+     "0.01": 0.5469999999999999,
+     "0.02": 0.6880000000000002,
+     "0.05": 0.8359999999999999,
+     "0.1": 0.9180000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_audiomnistds",
+     "method": "rfdtan4",
+     "dataset": "audiomnistds",
+     "run": "<internal>/audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999607,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.72,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_cornellwhalechallenge": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_cornellwhalechallenge",
+     "method": "rfdtan4",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.15,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.5141738783747118,
+    "validation_scale": 0.031459432733190816,
+    "test_pairs": 19994,
+    "queries": 100,
+    "database": 24500,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.08,
+     "0.01": 0.13,
+     "0.02": 0.25,
+     "0.05": 0.37,
+     "0.1": 0.51
+    },
+    "recall_at_10": {
+     "0.005": 0.13799999999999993,
+     "0.01": 0.17699999999999996,
+     "0.02": 0.25500000000000006,
+     "0.05": 0.3890000000000001,
+     "0.1": 0.531
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_cornellwhalechallenge",
+     "method": "rfdtan4",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999800,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.15,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_dreamera": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_dreamera",
+     "method": "rfdtan4",
+     "dataset": "dreamera",
+     "run": "<internal>/dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.3,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.171339936424222,
+    "validation_scale": 0.6195800993240007,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.13,
+     "0.01": 0.22,
+     "0.02": 0.29,
+     "0.05": 0.46,
+     "0.1": 0.63
+    },
+    "recall_at_10": {
+     "0.005": 0.11099999999999996,
+     "0.01": 0.17200000000000007,
+     "0.02": 0.2730000000000002,
+     "0.05": 0.44499999999999995,
+     "0.1": 0.6149999999999998
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_dreamera",
+     "method": "rfdtan4",
+     "dataset": "dreamera",
+     "run": "<internal>/dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.3,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_lendb": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_lendb",
+     "method": "rfdtan4",
+     "dataset": "lendb",
+     "run": "<internal>/lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.76,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.11159175666386612,
+    "validation_scale": 0.43778596888421945,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.61,
+     "0.01": 0.78,
+     "0.02": 0.86,
+     "0.05": 0.94,
+     "0.1": 0.98
+    },
+    "recall_at_10": {
+     "0.005": 0.48899999999999993,
+     "0.01": 0.6359999999999998,
+     "0.02": 0.784,
+     "0.05": 0.9190000000000002,
+     "0.1": 0.9720000000000002
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_lendb",
+     "method": "rfdtan4",
+     "dataset": "lendb",
+     "run": "<internal>/lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.76,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_w01_seismic": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_w01_seismic",
+     "method": "rfdtan4",
+     "dataset": "w01_seismic",
+     "run": "<internal>/seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.74,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.0839648891090079,
+    "validation_scale": 0.6730745137742953,
+    "test_pairs": 19998,
+    "queries": 100,
+    "database": 840000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.63,
+     "0.01": 0.65,
+     "0.02": 0.78,
+     "0.05": 0.91,
+     "0.1": 0.97
+    },
+    "recall_at_10": {
+     "0.005": 0.5000000000000001,
+     "0.01": 0.588,
+     "0.02": 0.6949999999999997,
+     "0.05": 0.8410000000000001,
+     "0.1": 0.9390000000000004
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_w01_seismic",
+     "method": "rfdtan4",
+     "dataset": "w01_seismic",
+     "run": "<internal>/seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999972,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.74,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_whalesounds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_whalesounds",
+     "method": "rfdtan4",
+     "dataset": "whalesounds",
+     "run": "<internal>/whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898",
+     "learning_rate": 1e-05,
+     "retry": {
+      "original_job": "2150331",
+      "reason": "non-finite gradient norm at approximately update 2050",
+      "original_lr": 0.0001,
+      "seed": 42,
+      "fresh_from_pretrained": true,
+      "failed_attempt": "<internal>/rfdtan4_whalesounds_2150331_20261108T221149Z"
+     }
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.35,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.15690585139899632,
+    "validation_scale": 0.2096246808696188,
+    "test_pairs": 20000,
+    "queries": 100,
+    "database": 40000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.11,
+     "0.01": 0.15,
+     "0.02": 0.21,
+     "0.05": 0.37,
+     "0.1": 0.55
+    },
+    "recall_at_10": {
+     "0.005": 0.10599999999999998,
+     "0.01": 0.16299999999999998,
+     "0.02": 0.23299999999999998,
+     "0.05": 0.3949999999999999,
+     "0.1": 0.5569999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_whalesounds",
+     "method": "rfdtan4",
+     "dataset": "whalesounds",
+     "run": "<internal>/whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898",
+     "learning_rate": 1e-05,
+     "retry": {
+      "original_job": "2150331",
+      "reason": "non-finite gradient norm at approximately update 2050",
+      "original_lr": 0.0001,
+      "seed": 42,
+      "fresh_from_pretrained": true,
+      "failed_attempt": "<internal>/rfdtan4_whalesounds_2150331_20261108T221149Z"
+     }
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 1e-05,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "training_target_count": 1999940,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.35,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_audiomnistds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_audiomnistds",
+     "method": "cdps",
+     "dataset": "audiomnistds",
+     "run": "<internal>/abl3_cdps_wd128_audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.57,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.15398478703031449,
+    "validation_scale": 0.28956082229012425,
+    "test_pairs": 19991,
+    "queries": 100,
+    "database": 20900,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.69,
+     "0.01": 0.71,
+     "0.02": 0.79,
+     "0.05": 0.89,
+     "0.1": 0.92
+    },
+    "recall_at_10": {
+     "0.005": 0.4440000000000001,
+     "0.01": 0.528,
+     "0.02": 0.6139999999999999,
+     "0.05": 0.7259999999999998,
+     "0.1": 0.8010000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_audiomnistds",
+     "method": "cdps",
+     "dataset": "audiomnistds",
+     "run": "<internal>/abl3_cdps_wd128_audiomnistds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999607,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.57,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_cornellwhalechallenge": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_cornellwhalechallenge",
+     "method": "cdps",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/abl3_cdps_wd128_cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.14,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.4504951420155474,
+    "validation_scale": 0.7649675924821688,
+    "test_pairs": 19994,
+    "queries": 100,
+    "database": 24500,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.12,
+     "0.01": 0.18,
+     "0.02": 0.23,
+     "0.05": 0.35,
+     "0.1": 0.46
+    },
+    "recall_at_10": {
+     "0.005": 0.11699999999999995,
+     "0.01": 0.15699999999999992,
+     "0.02": 0.20899999999999988,
+     "0.05": 0.30400000000000005,
+     "0.1": 0.4279999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_cornellwhalechallenge",
+     "method": "cdps",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/abl3_cdps_wd128_cornellwhalechallenge",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999800,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.14,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_dreamera": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_dreamera",
+     "method": "cdps",
+     "dataset": "dreamera",
+     "run": "<internal>/abl3_cdps_wd128_dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.15,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.13286543805036213,
+    "validation_scale": 0.730203845637452,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.04,
+     "0.01": 0.07,
+     "0.02": 0.15,
+     "0.05": 0.28,
+     "0.1": 0.41
+    },
+    "recall_at_10": {
+     "0.005": 0.05799999999999999,
+     "0.01": 0.09599999999999997,
+     "0.02": 0.14299999999999993,
+     "0.05": 0.2580000000000001,
+     "0.1": 0.38500000000000006
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_dreamera",
+     "method": "cdps",
+     "dataset": "dreamera",
+     "run": "<internal>/abl3_cdps_wd128_dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.15,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_fruitflies": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_fruitflies",
+     "method": "cdps",
+     "dataset": "fruitflies",
+     "run": "<internal>/abl3_cdps_wd128_fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.49,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.2720631954464685,
+    "validation_scale": 0.7296620994582298,
+    "test_pairs": 19997,
+    "queries": 100,
+    "database": 26759,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.4,
+     "0.01": 0.51,
+     "0.02": 0.64,
+     "0.05": 0.83,
+     "0.1": 0.9
+    },
+    "recall_at_10": {
+     "0.005": 0.29900000000000015,
+     "0.01": 0.4120000000000001,
+     "0.02": 0.5470000000000002,
+     "0.05": 0.7299999999999999,
+     "0.1": 0.8450000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_fruitflies",
+     "method": "cdps",
+     "dataset": "fruitflies",
+     "run": "<internal>/abl3_cdps_wd128_fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.49,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_lendb": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_lendb",
+     "method": "cdps",
+     "dataset": "lendb",
+     "run": "<internal>/abl3_cdps_wd128_lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.28,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.22286417767189104,
+    "validation_scale": 0.9864275704191415,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.19,
+     "0.01": 0.23,
+     "0.02": 0.28,
+     "0.05": 0.45,
+     "0.1": 0.65
+    },
+    "recall_at_10": {
+     "0.005": 0.14099999999999993,
+     "0.01": 0.20200000000000007,
+     "0.02": 0.28800000000000014,
+     "0.05": 0.4609999999999998,
+     "0.1": 0.6149999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_lendb",
+     "method": "cdps",
+     "dataset": "lendb",
+     "run": "<internal>/abl3_cdps_wd128_lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.28,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_mosquitosound": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_mosquitosound",
+     "method": "cdps",
+     "dataset": "mosquitosound",
+     "run": "<internal>/abl3_cdps_wd128_mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.22,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.2923681110304119,
+    "validation_scale": 0.8468508164363637,
+    "test_pairs": 19999,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.19,
+     "0.01": 0.29,
+     "0.02": 0.32,
+     "0.05": 0.53,
+     "0.1": 0.66
+    },
+    "recall_at_10": {
+     "0.005": 0.1569999999999999,
+     "0.01": 0.23099999999999996,
+     "0.02": 0.3139999999999999,
+     "0.05": 0.48000000000000015,
+     "0.1": 0.6269999999999997
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_mosquitosound",
+     "method": "cdps",
+     "dataset": "mosquitosound",
+     "run": "<internal>/abl3_cdps_wd128_mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999947,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.22,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_w01_seismic": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_w01_seismic",
+     "method": "cdps",
+     "dataset": "w01_seismic",
+     "run": "<internal>/abl3_cdps_wd128_w01_seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "selected": {
+     "step": 0,
+     "validation_recall_at_1": 0.25,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.16959010866928925,
+    "validation_scale": 0.6186413576755506,
+    "test_pairs": 19998,
+    "queries": 100,
+    "database": 840000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.23,
+     "0.01": 0.28,
+     "0.02": 0.34,
+     "0.05": 0.51,
+     "0.1": 0.66
+    },
+    "recall_at_10": {
+     "0.005": 0.11099999999999989,
+     "0.01": 0.1539999999999999,
+     "0.02": 0.24200000000000002,
+     "0.05": 0.4049999999999999,
+     "0.1": 0.5750000000000002
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_w01_seismic",
+     "method": "cdps",
+     "dataset": "w01_seismic",
+     "run": "<internal>/abl3_cdps_wd128_w01_seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999972,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 0,
+    "validation_recall_at_1": 0.25,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "cdps_whalesounds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "cdps_whalesounds",
+     "method": "cdps",
+     "dataset": "whalesounds",
+     "run": "<internal>/abl3_cdps_wd128_whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.19,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.24501053990825458,
+    "validation_scale": 0.9823003841385108,
+    "test_pairs": 20000,
+    "queries": 100,
+    "database": 40000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.08,
+     "0.01": 0.11,
+     "0.02": 0.11,
+     "0.05": 0.25,
+     "0.1": 0.31
+    },
+    "recall_at_10": {
+     "0.005": 0.07399999999999998,
+     "0.01": 0.105,
+     "0.02": 0.15,
+     "0.05": 0.252,
+     "0.1": 0.347
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "cdps_whalesounds",
+     "method": "cdps",
+     "dataset": "whalesounds",
+     "run": "<internal>/abl3_cdps_wd128_whalesounds",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999940,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.19,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "neuts_dreamera": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "neuts_dreamera",
+     "method": "neuts",
+     "dataset": "dreamera",
+     "run": "<internal>/dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.11,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.22044005378106715,
+    "validation_scale": 0.0440824249814241,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.05,
+     "0.01": 0.12,
+     "0.02": 0.14,
+     "0.05": 0.24,
+     "0.1": 0.37
+    },
+    "recall_at_10": {
+     "0.005": 0.039000000000000014,
+     "0.01": 0.07399999999999998,
+     "0.02": 0.10099999999999994,
+     "0.05": 0.172,
+     "0.1": 0.265
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "neuts_dreamera",
+     "method": "neuts",
+     "dataset": "dreamera",
+     "run": "<internal>/dreamera",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.11,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "neuts_lendb": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "neuts_lendb",
+     "method": "neuts",
+     "dataset": "lendb",
+     "run": "<internal>/lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "selected": {
+     "step": 1000,
+     "validation_recall_at_1": 0.07,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.6514507707223952,
+    "validation_scale": 0.0002268485550739357,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.02,
+     "0.01": 0.04,
+     "0.02": 0.07,
+     "0.05": 0.12,
+     "0.1": 0.2
+    },
+    "recall_at_10": {
+     "0.005": 0.016,
+     "0.01": 0.024000000000000007,
+     "0.02": 0.03700000000000001,
+     "0.05": 0.08999999999999997,
+     "0.1": 0.16299999999999992
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "neuts_lendb",
+     "method": "neuts",
+     "dataset": "lendb",
+     "run": "<internal>/lendb",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 1000,
+    "validation_recall_at_1": 0.07,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "neuts_w01_seismic": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "neuts_w01_seismic",
+     "method": "neuts",
+     "dataset": "w01_seismic",
+     "run": "<internal>/seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "selected": {
+     "step": 1000,
+     "validation_recall_at_1": 0.39,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.21680930946121346,
+    "validation_scale": 0.04935326711885316,
+    "test_pairs": 19998,
+    "queries": 100,
+    "database": 840000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.07,
+     "0.01": 0.15,
+     "0.02": 0.23,
+     "0.05": 0.35,
+     "0.1": 0.5
+    },
+    "recall_at_10": {
+     "0.005": 0.10299999999999995,
+     "0.01": 0.14999999999999988,
+     "0.02": 0.22699999999999998,
+     "0.05": 0.3740000000000001,
+     "0.1": 0.5030000000000002
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "neuts_w01_seismic",
+     "method": "neuts",
+     "dataset": "w01_seismic",
+     "run": "<internal>/seismic",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999972,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 1000,
+    "validation_recall_at_1": 0.39,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_fruitflies": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_fruitflies",
+     "method": "rfdtan4",
+     "dataset": "fruitflies",
+     "run": "<internal>/fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.64,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.19485407154422205,
+    "validation_scale": 0.13653902238145793,
+    "test_pairs": 19997,
+    "queries": 100,
+    "database": 26759,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.6,
+     "0.01": 0.7,
+     "0.02": 0.82,
+     "0.05": 0.97,
+     "0.1": 0.99
+    },
+    "recall_at_10": {
+     "0.005": 0.4749999999999998,
+     "0.01": 0.5959999999999999,
+     "0.02": 0.7220000000000002,
+     "0.05": 0.8870000000000003,
+     "0.1": 0.9529999999999998
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_fruitflies",
+     "method": "rfdtan4",
+     "dataset": "fruitflies",
+     "run": "<internal>/fruitflies",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.64,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "rfdtan4_mosquitosound": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "rfdtan4_mosquitosound",
+     "method": "rfdtan4",
+     "dataset": "mosquitosound",
+     "run": "<internal>/mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.33,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.31699399959081637,
+    "validation_scale": 0.09903873099563229,
+    "test_pairs": 19999,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.24,
+     "0.01": 0.35,
+     "0.02": 0.56,
+     "0.05": 0.7,
+     "0.1": 0.84
+    },
+    "recall_at_10": {
+     "0.005": 0.18,
+     "0.01": 0.283,
+     "0.02": 0.435,
+     "0.05": 0.6599999999999997,
+     "0.1": 0.8070000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "rfdtan4_mosquitosound",
+     "method": "rfdtan4",
+     "dataset": "mosquitosound",
+     "run": "<internal>/mosquitosound",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999947,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.33,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_audiomnistds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_audiomnistds",
+     "method": "wesee",
+     "dataset": "audiomnistds",
+     "run": "<internal>/11",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.79,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.14459523248938178,
+    "validation_scale": 0.017905732071083758,
+    "test_pairs": 19991,
+    "queries": 100,
+    "database": 20900,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.83,
+     "0.01": 0.92,
+     "0.02": 0.93,
+     "0.05": 0.97,
+     "0.1": 0.98
+    },
+    "recall_at_10": {
+     "0.005": 0.662,
+     "0.01": 0.7739999999999999,
+     "0.02": 0.861,
+     "0.05": 0.9320000000000002,
+     "0.1": 0.9750000000000001
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_audiomnistds",
+     "method": "wesee",
+     "dataset": "audiomnistds",
+     "run": "<internal>/11",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/audiomnistds_q100.npy",
+     "oracle": "<internal>/audiomnistds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        5000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b1b55622e21b5b7f553263e4bd0dcf7bfb31f632fa0b1c8adf11dab80d73be85"
+      },
+      "valid": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e6b8c3588a44d2b5839c732275a16a3d29e59837f7a0ea98b1070b32cd9fe4b0"
+      },
+      "test": {
+       "shape": [
+        2000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a6cba8e2ab516b7402c84cdaa7bc058d92c4d5c23a77290d8bc59d2dc25c3410"
+      },
+      "db": {
+       "shape": [
+        20900,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "47821218110d4176fbd002d80f7e294ebb466bf3f471d55b8ac5fc0e7fa6ad69"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b7fd635a8a3222c4c2e4a0ed7122946593b2c599d3c70a41ec3056983d6f9378"
+      }
+     },
+     "oracle_sha256": "4fd527b19d9078866ef4e3befbbdd30043836711ac75f47ce47b578dccf21b0f"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999607,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.79,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_cornellwhalechallenge": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_cornellwhalechallenge",
+     "method": "wesee",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/7",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.51,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.10938502061460138,
+    "validation_scale": 0.07166567381966213,
+    "test_pairs": 19994,
+    "queries": 100,
+    "database": 24500,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.49,
+     "0.01": 0.6,
+     "0.02": 0.71,
+     "0.05": 0.86,
+     "0.1": 0.94
+    },
+    "recall_at_10": {
+     "0.005": 0.3809999999999999,
+     "0.01": 0.485,
+     "0.02": 0.609,
+     "0.05": 0.7880000000000003,
+     "0.1": 0.8849999999999999
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_cornellwhalechallenge",
+     "method": "wesee",
+     "dataset": "cornellwhalechallenge",
+     "run": "<internal>/7",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/cornellwhalechallenge_q100.npy",
+     "oracle": "<internal>/cornellwhalechallenge_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+      },
+      "valid": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+      },
+      "test": {
+       "shape": [
+        4500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+      },
+      "db": {
+       "shape": [
+        24500,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+      },
+      "q": {
+       "shape": [
+        100,
+        4000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+      }
+     },
+     "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999800,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.51,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_dreamera": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_dreamera",
+     "method": "wesee",
+     "dataset": "dreamera",
+     "run": "<internal>/15",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.64,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.0848013128780105,
+    "validation_scale": 0.6572607196119159,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.54,
+     "0.01": 0.72,
+     "0.02": 0.82,
+     "0.05": 0.92,
+     "0.1": 0.95
+    },
+    "recall_at_10": {
+     "0.005": 0.4149999999999999,
+     "0.01": 0.5619999999999998,
+     "0.02": 0.6779999999999999,
+     "0.05": 0.8270000000000002,
+     "0.1": 0.8989999999999998
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_dreamera",
+     "method": "wesee",
+     "dataset": "dreamera",
+     "run": "<internal>/15",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/dreamera_q100.npy",
+     "oracle": "<internal>/dreamera_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d59aab0562521370542ddc4295078674294b2221f0b271c33844c1fd8371934"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f339f9cd3e85f6ecb1ed9e246c49291d7e140e8f5f77033682db3db119531fe5"
+      },
+      "test": {
+       "shape": [
+        5000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e59d0c6c6d889be23c10483e1b0312011d3fea6d440b0eec1ca34f2c8ad88b84"
+      },
+      "db": {
+       "shape": [
+        60000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "77daf206fb1dda375c25d3e54f6e547dc2b3f834da39c2b996300ff514a2adf1"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a8f9ddcf6e334e0e55191d50ad2061dfc8b30c0b632590b1afeade86955ea787"
+      }
+     },
+     "oracle_sha256": "efca82cc97439d4c1a3706350094fce43801a119aea895858341f7f4479d57b3"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.64,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_fruitflies": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_fruitflies",
+     "method": "wesee",
+     "dataset": "fruitflies",
+     "run": "<internal>/39",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "selected": {
+     "step": 1000,
+     "validation_recall_at_1": 0.89,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.1249470790673465,
+    "validation_scale": 0.019716590687322396,
+    "test_pairs": 19997,
+    "queries": 100,
+    "database": 26759,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.73,
+     "0.01": 0.83,
+     "0.02": 0.9,
+     "0.05": 0.98,
+     "0.1": 0.99
+    },
+    "recall_at_10": {
+     "0.005": 0.624,
+     "0.01": 0.7709999999999997,
+     "0.02": 0.8809999999999999,
+     "0.05": 0.9610000000000001,
+     "0.1": 0.992
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_fruitflies",
+     "method": "wesee",
+     "dataset": "fruitflies",
+     "run": "<internal>/39",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/fruitflies_q100.npy",
+     "oracle": "<internal>/fruitflies_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+      },
+      "valid": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+      },
+      "test": {
+       "shape": [
+        6759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+      },
+      "db": {
+       "shape": [
+        26759,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+      },
+      "q": {
+       "shape": [
+        100,
+        5000
+       ],
+       "dtype": "float32",
+       "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+      }
+     },
+     "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 1000,
+    "validation_recall_at_1": 0.89,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_lendb": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_lendb",
+     "method": "wesee",
+     "dataset": "lendb",
+     "run": "<internal>/19",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.88,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.07488038040762271,
+    "validation_scale": 0.25567349825253594,
+    "test_pairs": 19992,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.83,
+     "0.01": 0.88,
+     "0.02": 0.96,
+     "0.05": 1.0,
+     "0.1": 1.0
+    },
+    "recall_at_10": {
+     "0.005": 0.746,
+     "0.01": 0.8629999999999999,
+     "0.02": 0.937,
+     "0.05": 0.9890000000000001,
+     "0.1": 0.9990000000000001
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_lendb",
+     "method": "wesee",
+     "dataset": "lendb",
+     "run": "<internal>/19",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/lendb_q100.npy",
+     "oracle": "<internal>/lendb_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        20000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+      },
+      "valid": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+      },
+      "test": {
+       "shape": [
+        5000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+      },
+      "db": {
+       "shape": [
+        60000,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+      },
+      "q": {
+       "shape": [
+        100,
+        540
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+      }
+     },
+     "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999906,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.88,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_mosquitosound": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_mosquitosound",
+     "method": "wesee",
+     "dataset": "mosquitosound",
+     "run": "<internal>/35",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.84,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.10596412558017766,
+    "validation_scale": 0.028675621155723346,
+    "test_pairs": 19999,
+    "queries": 100,
+    "database": 60000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.66,
+     "0.01": 0.8,
+     "0.02": 0.87,
+     "0.05": 0.96,
+     "0.1": 0.99
+    },
+    "recall_at_10": {
+     "0.005": 0.619,
+     "0.01": 0.7589999999999999,
+     "0.02": 0.8660000000000002,
+     "0.05": 0.96,
+     "0.1": 0.9900000000000003
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_mosquitosound",
+     "method": "wesee",
+     "dataset": "mosquitosound",
+     "run": "<internal>/35",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/mosquitosound_q100.npy",
+     "oracle": "<internal>/mosquitosound_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        50000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+      },
+      "test": {
+       "shape": [
+        10000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+      },
+      "db": {
+       "shape": [
+        60000,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+      },
+      "q": {
+       "shape": [
+        100,
+        3750
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+      }
+     },
+     "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999947,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.84,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_w01_seismic": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_w01_seismic",
+     "method": "wesee",
+     "dataset": "w01_seismic",
+     "run": "<internal>/23",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "selected": {
+     "step": 300,
+     "validation_recall_at_1": 0.86,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.08342414979330408,
+    "validation_scale": 0.6871165806271339,
+    "test_pairs": 19998,
+    "queries": 100,
+    "database": 840000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.69,
+     "0.01": 0.82,
+     "0.02": 0.91,
+     "0.05": 0.98,
+     "0.1": 1.0
+    },
+    "recall_at_10": {
+     "0.005": 0.6739999999999999,
+     "0.01": 0.7820000000000004,
+     "0.02": 0.8759999999999997,
+     "0.05": 0.9540000000000002,
+     "0.1": 0.9840000000000001
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_w01_seismic",
+     "method": "wesee",
+     "dataset": "w01_seismic",
+     "run": "<internal>/23",
+     "data": "<internal>/samples_w01_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/seismic_q100.npy",
+     "oracle": "<internal>/seismic_w0.1_k10.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        100000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+      },
+      "valid": {
+       "shape": [
+        50000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+      },
+      "test": {
+       "shape": [
+        10000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+      },
+      "db": {
+       "shape": [
+        840000,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+      },
+      "q": {
+       "shape": [
+        100,
+        256
+       ],
+       "dtype": "float32",
+       "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+      }
+     },
+     "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999972,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 300,
+    "validation_recall_at_1": 0.86,
+    "queries": 100,
+    "pool": 1900
+   }
+  },
+  "wesee_whalesounds": {
+   "result": {
+    "complete": true,
+    "task": {
+     "key": "wesee_whalesounds",
+     "method": "wesee",
+     "dataset": "whalesounds",
+     "run": "<internal>/3",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "selected": {
+     "step": 3000,
+     "validation_recall_at_1": 0.48,
+     "queries": 100,
+     "pool": 1900
+    },
+    "mean_abs_re": 0.11567096863834826,
+    "validation_scale": 0.044889818046320556,
+    "test_pairs": 20000,
+    "queries": 100,
+    "database": 40000,
+    "scoring": "Euclidean",
+    "encoder_refined": true,
+    "recall_at_1": {
+     "0.005": 0.39,
+     "0.01": 0.52,
+     "0.02": 0.66,
+     "0.05": 0.88,
+     "0.1": 0.96
+    },
+    "recall_at_10": {
+     "0.005": 0.32900000000000007,
+     "0.01": 0.478,
+     "0.02": 0.6350000000000001,
+     "0.05": 0.821,
+     "0.1": 0.9279999999999998
+    }
+   },
+   "protocol.json": {
+    "task": {
+     "key": "wesee_whalesounds",
+     "method": "wesee",
+     "dataset": "whalesounds",
+     "run": "<internal>/3",
+     "data": "<internal>/samples_random0.1_npy",
+     "database": "<internal>/db.npy",
+     "queries": "<internal>/whalesounds_q100.npy",
+     "oracle": "<internal>/whalesounds_exact100.nn.bin",
+     "targets": null,
+     "missing": [],
+     "input_signatures": {
+      "train": {
+       "shape": [
+        30000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+      },
+      "valid": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+      },
+      "test": {
+       "shape": [
+        10000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+      },
+      "db": {
+       "shape": [
+        40000,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+      },
+      "q": {
+       "shape": [
+        100,
+        2500
+       ],
+       "dtype": "float32",
+       "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+      }
+     },
+     "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+    },
+    "steps": 3000,
+    "regression_pairs_per_step": 32,
+    "ranking_triplets_per_step": 16,
+    "lr": 0.0001,
+    "seed": 42,
+    "loss": "relative_huber_delta0.1+log_hinge_lambda1_margin0.1",
+    "encoder_mode": "eval (gradients enabled, running statistics fixed)",
+    "selection": "validation retrieval; steps 0,300,1000,3000; ties prefer fewer steps",
+    "scoring": "Euclidean; no pair-conditioned generator",
+    "gpu": "NVIDIA H100 PCIe",
+    "training_target_count": 1999940,
+    "ranking_anchors": 4000
+   },
+   "selection.json": {
+    "step": 3000,
+    "validation_recall_at_1": 0.48,
+    "queries": 100,
+    "pool": 1900
+   }
+  }
+ }
+}

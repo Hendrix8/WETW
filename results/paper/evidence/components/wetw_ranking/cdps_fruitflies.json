@@ -1,0 +1,9 @@
+{
+ "key": "cdps_fruitflies",
+ "frozen_lab": "abl3_cdps_wd128_fruitflies",
+ "lab": "er_abl3_cdps_wd128_fruitflies",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.16983395891457193,
+ "recall1_2pct": 0.79,
+ "recall10_2pct": 0.6339999999999999
+}

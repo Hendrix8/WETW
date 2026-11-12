@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_fruitflies",
+ "frozen_lab": "abl3_rfdtan4_v2_fruitflies",
+ "lab": "er_abl3_rfdtan4_v2_fruitflies",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.11791510907823721,
+ "recall1_2pct": 0.95,
+ "recall10_2pct": 0.8770000000000002
+}

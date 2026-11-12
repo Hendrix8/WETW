@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wetw"
+version = "0.1.0"
+description = "Pair-specific weighted Euclidean distances for efficient DTW search"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "WETW Authors"}]
+dependencies = ["numpy>=1.24,<3", "torch>=2.2,<3", "scipy>=1.10,<2", "hydra-core>=1.3.2,<1.4", "omegaconf>=2.3,<2.4", "dtaidistance>=2.3.12,<3", "tqdm>=4.65", "mpmath>=1.3", "matplotlib>=3.7,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1"]
+ann = ["hnswlib>=0.8"]
+baselines = ["scikit-learn>=1.2", "wandb>=0.16"]
+
+[project.urls]
+Repository = "https://github.com/Hendrix8/WETW"
+
+[project.scripts]
+wetw = "wetw.cli:main"
+wetw-train = "wetw.experiment:main"
+wetw-baseline = "wetw.baselines:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wetw = ["conf/*.yaml", "conf/dataset/*.yaml", "conf/study/*.yaml", "presets/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

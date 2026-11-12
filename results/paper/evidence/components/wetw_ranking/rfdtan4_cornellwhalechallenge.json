@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_cornellwhalechallenge",
+ "frozen_lab": "abl3_rfdtan4_v2_cornellwhalechallenge",
+ "lab": "er_abl3_rfdtan4_v2_cornellwhalechallenge",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.06623403673068066,
+ "recall1_2pct": 0.64,
+ "recall10_2pct": 0.597
+}

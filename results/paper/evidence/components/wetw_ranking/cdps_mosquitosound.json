@@ -1,0 +1,9 @@
+{
+ "key": "cdps_mosquitosound",
+ "frozen_lab": "abl3_cdps_wd128_mosquitosound",
+ "lab": "er_abl3_cdps_wd128_mosquitosound",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.15796535871248987,
+ "recall1_2pct": 0.45,
+ "recall10_2pct": 0.38400000000000006
+}

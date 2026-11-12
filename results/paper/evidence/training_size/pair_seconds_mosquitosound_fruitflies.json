@@ -1,0 +1,12 @@
+{
+ "mosquitosound": {
+  "L": 3750,
+  "pairs": 300,
+  "sec_per_pair": 0.016983776362612845
+ },
+ "fruitflies": {
+  "L": 5000,
+  "pairs": 300,
+  "sec_per_pair": 0.029369595131526392
+ }
+}

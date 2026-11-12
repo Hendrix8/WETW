@@ -1,0 +1,9 @@
+{
+ "key": "ldps_dreamera",
+ "frozen_lab": "devq_abl3_ldps_wd_dreamera",
+ "lab": "er_devq_abl3_ldps_wd_dreamera",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.07711024421471997,
+ "recall1_2pct": 0.34,
+ "recall10_2pct": 0.28500000000000003
+}

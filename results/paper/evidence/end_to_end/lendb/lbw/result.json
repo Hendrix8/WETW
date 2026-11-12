@@ -1,0 +1,30 @@
+{
+  "method": "lbw",
+  "lab": "lendb",
+  "seconds_mean": 1.04162,
+  "cascade": {
+    "mode": "lbw",
+    "pruned_webb": 0.492283,
+    "limit": 60000,
+    "N": 60000,
+    "L": 540,
+    "r": 53,
+    "wfrac": 0.1,
+    "k": 10,
+    "n_queries": 20,
+    "load_s": 0.058,
+    "db_envelope_s": 3.249,
+    "sec_per_query_mean": 1.04162,
+    "sec_per_query_min": 0.070005,
+    "sec_per_query_max": 2.965192,
+    "qps": 0.96,
+    "pruned_kim": 0.0,
+    "pruned_keogh_eq": 0.0,
+    "pruned_keogh_ec": 0.0,
+    "dtw_computed": 0.507718,
+    "dtw_completed_improving": 0.00150917
+  },
+  "rel_err": 0.0,
+  "exact_usp_seconds": 1.061067,
+  "queries": 20
+}

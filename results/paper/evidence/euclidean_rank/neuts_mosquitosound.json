@@ -1,0 +1,87 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_mosquitosound",
+  "method": "neuts",
+  "dataset": "mosquitosound",
+  "run": "mosquitosound",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "mosquitosound_q100.npy",
+  "oracle": "mosquitosound_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     50000,
+     3750
+    ],
+    "dtype": "float32",
+    "sample_sha256": "9d83bb9fb9ce584be2ab68454271004474c1a23a575d1e2d8e4282c2c9eb6199"
+   },
+   "valid": {
+    "shape": [
+     10000,
+     3750
+    ],
+    "dtype": "float32",
+    "sample_sha256": "006acd90b66869f6860648503a8f4b340ba139005c39adb2c650bb0c0720d7c2"
+   },
+   "test": {
+    "shape": [
+     10000,
+     3750
+    ],
+    "dtype": "float32",
+    "sample_sha256": "f8323e5fd63547ad3cc34fdbce399186b07a794b0c8f2ad33fab38767cfb2a70"
+   },
+   "db": {
+    "shape": [
+     60000,
+     3750
+    ],
+    "dtype": "float32",
+    "sample_sha256": "4de4a1ac47148e89959e33faf6a003a2734b55a776e04d7d70ac4df32e23333b"
+   },
+   "q": {
+    "shape": [
+     100,
+     3750
+    ],
+    "dtype": "float32",
+    "sample_sha256": "9ce6fed25a271d85ec7950fe47aa9434f1baffd8f60e373e15cd001d5eda2ae2"
+   }
+  },
+  "oracle_sha256": "6cb10c2e562448b14f06453b8b40419e442b586dc2f14347287ad3fb4d706020"
+ },
+ "selected": {
+  "step": 300,
+  "validation_recall_at_1": 0.06,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.28009964805772053,
+ "validation_scale": 0.008207868801858698,
+ "test_pairs": 19999,
+ "queries": 100,
+ "database": 60000,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.02,
+  "0.01": 0.02,
+  "0.02": 0.03,
+  "0.05": 0.06,
+  "0.1": 0.1
+ },
+ "recall_at_10": {
+  "0.005": 0.016000000000000004,
+  "0.01": 0.020000000000000004,
+  "0.02": 0.03200000000000001,
+  "0.05": 0.07299999999999997,
+  "0.1": 0.14399999999999982
+ },
+ "embeddings_host": "cluster (Quadro RTX 6000), 28 aligned batch-8 shards; worker.py search; matches cluster emb_valid rows 0-800 within 6e-7"
+}

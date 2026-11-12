@@ -1,0 +1,24 @@
+{
+ "datasets_with_both": [
+  "whalesounds",
+  "cornellwhalechallenge",
+  "audiomnistds",
+  "dreamera",
+  "lendb",
+  "w01_seismic",
+  "mosquitosound",
+  "fruitflies"
+ ],
+ "average": {
+  "no_tfe": {
+   "re": 0.06846059235853023,
+   "r1": 0.895,
+   "r10": 0.852875
+  },
+  "tfe": {
+   "re": 0.05401094519623437,
+   "r1": 0.9475000000000002,
+   "r10": 0.89825
+  }
+ }
+}

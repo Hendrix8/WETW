@@ -1,0 +1,9 @@
+{
+ "key": "ldps_cornellwhalechallenge",
+ "frozen_lab": "devq_abl3_ldps_wd_cornellwhalechallenge",
+ "lab": "er_devq_abl3_ldps_wd_cornellwhalechallenge",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.06834456840574675,
+ "recall1_2pct": 0.66,
+ "recall10_2pct": 0.597
+}

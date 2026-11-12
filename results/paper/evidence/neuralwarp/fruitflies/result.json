@@ -1,0 +1,86 @@
+{
+  "method": "neuralwarp",
+  "lab": "fruitflies",
+  "N": 26759,
+  "paa": 10,
+  "wfrac": 0.1,
+  "curve": [
+    {
+      "rho": 0.005,
+      "recall_at_1": 0.12,
+      "recall_at_10": 0.112,
+      "rank_s": 15.509484820021317,
+      "verify_s": 1.02274075,
+      "seconds": 16.532225570021318
+    },
+    {
+      "rho": 0.01,
+      "recall_at_1": 0.17,
+      "recall_at_10": 0.181,
+      "rank_s": 15.509484820021317,
+      "verify_s": 1.5299117,
+      "seconds": 17.039396520021317
+    },
+    {
+      "rho": 0.02,
+      "recall_at_1": 0.29,
+      "recall_at_10": 0.289,
+      "rank_s": 15.509484820021317,
+      "verify_s": 2.46769515,
+      "seconds": 17.977179970021318
+    },
+    {
+      "rho": 0.05,
+      "recall_at_1": 0.42,
+      "recall_at_10": 0.47000000000000003,
+      "rank_s": 15.509484820021317,
+      "verify_s": 4.6664999,
+      "seconds": 20.17598472002132
+    },
+    {
+      "rho": 0.1,
+      "recall_at_1": 0.59,
+      "recall_at_10": 0.637,
+      "rank_s": 15.509484820021317,
+      "verify_s": 7.657548,
+      "seconds": 23.16703282002132
+    },
+    {
+      "rho": 0.2,
+      "recall_at_1": 0.78,
+      "recall_at_10": 0.796,
+      "rank_s": 15.509484820021317,
+      "verify_s": 12.112194149999999,
+      "seconds": 27.621678970021314
+    },
+    {
+      "rho": 0.3,
+      "recall_at_1": 0.87,
+      "recall_at_10": 0.875,
+      "rank_s": 15.509484820021317,
+      "verify_s": 15.246022199999999,
+      "seconds": 30.755507020021316
+    },
+    {
+      "rho": 0.4,
+      "recall_at_1": 0.93,
+      "recall_at_10": 0.93,
+      "rank_s": 15.509484820021317,
+      "verify_s": 17.406267200000002,
+      "seconds": 32.915752020021316
+    },
+    {
+      "rho": 0.5,
+      "recall_at_1": 0.93,
+      "recall_at_10": 0.956,
+      "rank_s": 15.509484820021317,
+      "verify_s": 19.099091549999997,
+      "seconds": 34.60857637002131
+    }
+  ],
+  "queries_recall": 100,
+  "queries_timed": 20,
+  "gpu": "NVIDIA A100",
+  "cpu": "one thread per query",
+  "checkpoint_note": "Validation-selected WarpDistill checkpoint; ranks on an A100 GPU, verification on the CPU timing server"
+}

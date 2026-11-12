@@ -1,0 +1,22 @@
+{
+ "cornellwhalechallenge": {
+  "n_test": 4500,
+  "dtw_triangle_violation": 0.0,
+  "dtw_duplicate_pairs": 601,
+  "series_with_dtw_duplicate": 95,
+  "WETW, + rank": {
+   "self_over_nn_median": 1.6232962066078097e-06,
+   "self_over_nn_p90": 1.8258384032156425e-06,
+   "share_self_ge_half_nn": 0.0,
+   "share_self_ge_nn": 0.0,
+   "self_rank_fail": 0.0,
+   "self_rank_mean_closer": 0.0,
+   "re_random": 0.05831149715670912,
+   "re_knn10": 0.14465756017977316,
+   "triangle_violation": 0.0,
+   "bias": -0.009805860441117245,
+   "dup_pairs_pred_median": 6.697898835885003e-05,
+   "dup_pairs_over_median_nn": 1.6232962066078097e-06
+  }
+ }
+}

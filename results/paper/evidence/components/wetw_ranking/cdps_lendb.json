@@ -1,0 +1,9 @@
+{
+ "key": "cdps_lendb",
+ "frozen_lab": "abl3_cdps_wd128_lendb",
+ "lab": "er_abl3_cdps_wd128_lendb",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.14524193774461566,
+ "recall1_2pct": 0.38,
+ "recall10_2pct": 0.38199999999999995
+}

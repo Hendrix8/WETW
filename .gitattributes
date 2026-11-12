@@ -1,0 +1,5 @@
+*.md whitespace=-blank-at-eol
+# Retain historical source and exact patch-string formatting.
+src/wetw/_reference/** -whitespace
+experiments/baselines/** -whitespace
+third_party/patches/** -whitespace

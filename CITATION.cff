@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite the WETW paper when using this code."
+title: "WETW: Learning Pair-Specific Weighted Euclidean Distances for Efficient DTW Search"
+type: software
+version: 0.1.0
+date-released: 2026-11-12
+authors:
+  - family-names: Panourgias
+    given-names: Christos
+  - family-names: Wang
+    given-names: Qitong
+  - family-names: Tzagkarakis
+    given-names: George
+  - family-names: Palpanas
+    given-names: Themis
+repository-code: "https://github.com/Hendrix8/WETW"
+license: MIT

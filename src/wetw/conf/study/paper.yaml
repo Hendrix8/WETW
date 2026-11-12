@@ -1,0 +1,4 @@
+# @package _global_
+# Paper sizes and schedules; all paths are resolved from data.root.
+release:
+  protocol: paper

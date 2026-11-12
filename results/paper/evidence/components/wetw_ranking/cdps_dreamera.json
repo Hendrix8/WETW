@@ -1,0 +1,9 @@
+{
+ "key": "cdps_dreamera",
+ "frozen_lab": "abl3_cdps_wd128_dreamera",
+ "lab": "er_abl3_cdps_wd128_dreamera",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.09020953656889129,
+ "recall1_2pct": 0.22,
+ "recall10_2pct": 0.191
+}

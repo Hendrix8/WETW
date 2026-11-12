@@ -1,0 +1,9 @@
+{
+ "key": "ldps_mosquitosound",
+ "frozen_lab": "abl3_ldps_wd_mosquitosound",
+ "lab": "er_abl3_ldps_wd_mosquitosound",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.11222323177321042,
+ "recall1_2pct": 0.79,
+ "recall10_2pct": 0.7180000000000001
+}

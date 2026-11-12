@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_lendb",
+ "frozen_lab": "abl3_rfdtan4_v2_lendb",
+ "lab": "er_abl3_rfdtan4_v2_lendb",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.07533267358332411,
+ "recall1_2pct": 0.91,
+ "recall10_2pct": 0.856
+}

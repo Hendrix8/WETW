@@ -1,0 +1,9 @@
+{
+ "key": "rfdtan4_mosquitosound",
+ "frozen_lab": "abl3_rfdtan4_v2_mosquitosound",
+ "lab": "er_abl3_rfdtan4_v2_mosquitosound",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.12803650766358957,
+ "recall1_2pct": 0.78,
+ "recall10_2pct": 0.6779999999999999
+}

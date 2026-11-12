@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_w01_seismic",
+  "method": "neuts",
+  "dataset": "w01_seismic",
+  "run": "seismic",
+  "data": "samples_w01_npy",
+  "database": "db.npy",
+  "queries": "seismic_q100.npy",
+  "oracle": "seismic_w0.1_k10.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     100000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "7bfc79cd8ae89dce5b49676b698aad5bc9efe952195a16165da37c1ad0f8658b"
+   },
+   "valid": {
+    "shape": [
+     50000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "2d4c0528b39a1cdaec08c1d2e3fecdef1df11164179721cd59779903e1554b31"
+   },
+   "test": {
+    "shape": [
+     10000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "722c3b23ca257f6cbb7d7a7b329a42fab93573ac314364da3671fb5b365ae06f"
+   },
+   "db": {
+    "shape": [
+     840000,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "f261b3cec0bdbdcd634721519575b37535b3fd182a7914efd81dbffbc23fe56c"
+   },
+   "q": {
+    "shape": [
+     100,
+     256
+    ],
+    "dtype": "float32",
+    "sample_sha256": "8a3e89089d09e74d121c7c8fbcd9193d3dc816eb64621dacf38771ee8e772064"
+   }
+  },
+  "oracle_sha256": "794cd06aae72f3767b98e594c0351fd9f079842b52f40430e72e53df6fd335c0"
+ },
+ "selected": {
+  "step": 1000,
+  "validation_recall_at_1": 0.39,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.21680930946121346,
+ "validation_scale": 0.04935326711885316,
+ "test_pairs": 19998,
+ "queries": 100,
+ "database": 840000,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.07,
+  "0.01": 0.15,
+  "0.02": 0.23,
+  "0.05": 0.35,
+  "0.1": 0.5
+ },
+ "recall_at_10": {
+  "0.005": 0.10299999999999995,
+  "0.01": 0.14999999999999988,
+  "0.02": 0.22699999999999998,
+  "0.05": 0.3740000000000001,
+  "0.1": 0.5030000000000002
+ }
+}

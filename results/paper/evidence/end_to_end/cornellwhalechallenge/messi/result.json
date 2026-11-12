@@ -1,0 +1,25 @@
+{
+  "method": "messi_dtw",
+  "lab": "cornellwhalechallenge",
+  "N": 24500,
+  "L": 4000,
+  "r": 399,
+  "build_s": 0.328,
+  "queries": 10,
+  "seconds": [
+    278.897088,
+    255.026994,
+    213.787497,
+    285.902437,
+    324.648656,
+    212.923833,
+    263.878924,
+    284.88104,
+    273.776952,
+    300.947111
+  ],
+  "seconds_mean": 269.4670532,
+  "recall_at_10": 0.96,
+  "exact_usp_seconds": 64.569424,
+  "cpu": "AMD EPYC 7543 32-Core Processor"
+}

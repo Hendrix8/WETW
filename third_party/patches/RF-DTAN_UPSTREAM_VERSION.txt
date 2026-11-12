@@ -1,0 +1,7 @@
+BGU-CS-VIL/RF-DTAN @ 3e631ad (unmodified upstream, cloned 2026-10-21)
+Single change (2026-10-21, for a fair comparison at equal embedding size d=128):
+  models/RFDTAN.py: self.output_dim = 64  ->  kwargs.get("output_dim", 64)
+Second change (2026-10-22): models/RFDTAN.py transform_grid: method="closed_form" ->
+  os.environ.get("RFDTAN_GRAD", "closed_form"). On urania the difw C++/CUDA backends do not build
+  (no Python.h; cpab_ops.cu fails with nvcc 12.4), and the pure-PyTorch closed-form gradient crashes
+  for batched grids; RFDTAN_GRAD=numeric (difw numeric gradient) is used for runs that train the warp.

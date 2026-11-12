@@ -1,0 +1,61 @@
+{
+ "paper": "WETW: Learning Pair-Specific Weighted Euclidean Distances for Efficient DTW Search",
+ "authors": [
+  "Christos Panourgias",
+  "Qitong Wang",
+  "George Tzagkarakis",
+  "Themis Palpanas"
+ ],
+ "purpose": "Saved numeric evidence behind every figure and table of the paper's experimental evaluation; redrawing it is not a fresh experiment.",
+ "collections": [
+  "WhaleSounds",
+  "CornellWhale",
+  "AudioMNIST-DS",
+  "DREAMER-A",
+  "LenDB",
+  "Seismic",
+  "MosquitoSound",
+  "FruitFlies"
+ ],
+ "scalability": "AudioMNIST, 2K training series, database 3.25K-26K, length 1K-48K, warping window 1%-20%",
+ "figures": {
+  "fig_e2e_mean": "Figure 1, mean recall@10 versus seconds per query (geometric mean) over the eight collections",
+  "fig_e2e_v2": "Figure 5, complete search per collection",
+  "fig_amnist": "Figure 6, AudioMNIST scalability at a 2% shortlist",
+  "fig_trainsize": "Figure 7, recall@10 and training-set size versus preprocessing and training cost"
+ },
+ "tables": {
+  "table_lower_bound_survival.tex": "Table II, candidates reaching the DTW stage with LB_Keogh or LB_Webb alone",
+  "table_offline_cost.tex": "Table III, DTW-target and training cost, search time saved per query and break-even",
+  "table_heads.tex": "Table IV, distance functions on frozen WESee embeddings (regression only)",
+  "table_direct_mlp.tex": "Table V, WETW versus a direct MLP in WETW-FV",
+  "table_components.tex": "Table VI, objective ablations for every encoder",
+  "table_architecture_capacity_matched.tex": "Table VII, temporal branch ablation at matched capacity"
+ },
+ "evidence": {
+  "end_to_end/<collection>/<method>/result.json": "Figures 1 and 5 (wetwfv = WETW-FV; exact = UCR Suite; lbk, lbw = single lower bounds; messi = MESSI-DTW; ds<g> = downsampled DTW with PAA factor g; cdps, ldps, neuts, rfdtan_wd = learned baselines) and Table II",
+  "end_to_end/kappa_selection.json": "prefilter ratio kappa chosen on validation for every collection and shortlist fraction",
+  "neuralwarp/<collection>/result.json": "NeuralWarp in Figures 1 and 5",
+  "main_models/<collection>.json": "validation and test recall of the main WETW-FV models for every kappa and shortlist fraction",
+  "seeds/": "training seeds 43 and 44 of every main model and the three-seed summary",
+  "scalability_controls/": "Figure 6 exact searches and downsampled DTW",
+  "training_size/": "Figure 7 subsets, epochs, shortlist fractions and costs",
+  "offline_cost/offline_cost.json": "Table III",
+  "heads/, static_controls/": "Table IV and the WESee L_WD column of Table VI",
+  "direct_mlp/": "Table V",
+  "components/, euclidean_rank/": "Table VI",
+  "tfe_capacity_matched/": "Table VII"
+ },
+ "timing": [
+  "Query times use one CPU thread per query on AMD EPYC 7543 nodes (evidence/end_to_end/hardware_audit.json) and include query encoding, database scoring, shortlist selection and exact verification with the UCR-Suite cascade and EAPrunedDTW.",
+  "NeuralWarp scores on an A100 GPU; Figure 6 NeuralWarp scoring measured on an H100 is multiplied by 1.10 to report A100-equivalent time.",
+  "Figure 6 learned-baseline scoring time is measured at L=4,000 on AudioMNIST-DS and scaled linearly with series length and database size; their verification time is measured at every setting.",
+  "Figure 7 training costs include pair-count estimates and H100-to-A100 scaling."
+ ],
+ "pretrained": {
+  "collections": "pretrained/<collection>.pt, Figures 1 and 5; kappa per shortlist fraction",
+  "scalability": "pretrained/audiomnist_L<length>[_w<window>].pt, Figure 6; one kappa per setting",
+  "contents": "ranking-refined encoder (stage iii) + validation-selected refined generator + configuration + kappa",
+  "description": "pretrained/README.md"
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_whalesounds",
+  "method": "neuts",
+  "dataset": "whalesounds",
+  "run": "whalesounds",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "whalesounds_q100.npy",
+  "oracle": "whalesounds_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     30000,
+     2500
+    ],
+    "dtype": "float32",
+    "sample_sha256": "ebeaa2c06f977c870055699b2518de16cc0cacfd82b4376d7a24fc1f3133682f"
+   },
+   "valid": {
+    "shape": [
+     10000,
+     2500
+    ],
+    "dtype": "float32",
+    "sample_sha256": "5dec5d6e30c4f6efa838551a73cfafc331716e342db2efe789d33971a5e84e7e"
+   },
+   "test": {
+    "shape": [
+     10000,
+     2500
+    ],
+    "dtype": "float32",
+    "sample_sha256": "57d0f9543e4ca1bacc90f2f5b49b259bb8130a2173f40f3cc9ec2a070e487d33"
+   },
+   "db": {
+    "shape": [
+     40000,
+     2500
+    ],
+    "dtype": "float32",
+    "sample_sha256": "9076a6360e9ad9290dac8d3d8d5b04099eb22e37ac7f5d228df35b2f5ee7e7ee"
+   },
+   "q": {
+    "shape": [
+     100,
+     2500
+    ],
+    "dtype": "float32",
+    "sample_sha256": "ba410e399c8e3b466e7d5b58a7276dcfb3b0a69aef41081833fe04d5787a7eb7"
+   }
+  },
+  "oracle_sha256": "f0c9adc734da49c992bd26dbd1905fd985bfdc0ea68f9de287588a044f834898"
+ },
+ "selected": {
+  "step": 1000,
+  "validation_recall_at_1": 0.05,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.239190608699157,
+ "validation_scale": 0.009956264507586752,
+ "test_pairs": 20000,
+ "queries": 100,
+ "database": 40000,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.03,
+  "0.01": 0.03,
+  "0.02": 0.05,
+  "0.05": 0.08,
+  "0.1": 0.16
+ },
+ "recall_at_10": {
+  "0.005": 0.012000000000000002,
+  "0.01": 0.019000000000000003,
+  "0.02": 0.03000000000000001,
+  "0.05": 0.066,
+  "0.1": 0.1299999999999999
+ }
+}

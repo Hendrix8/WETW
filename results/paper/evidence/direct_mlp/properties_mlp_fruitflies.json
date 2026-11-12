@@ -1,0 +1,22 @@
+{
+ "fruitflies": {
+  "n_test": 6759,
+  "dtw_triangle_violation": 0.0,
+  "dtw_duplicate_pairs": 1,
+  "series_with_dtw_duplicate": 2,
+  "Direct MLP, + rank": {
+   "self_over_nn_median": 0.7827843747412181,
+   "self_over_nn_p90": 0.9312076223199264,
+   "share_self_ge_half_nn": 0.9674411721178038,
+   "share_self_ge_nn": 0.03655468403137487,
+   "self_rank_fail": 0.0,
+   "self_rank_mean_closer": 0.0,
+   "re_random": 0.07397366044234557,
+   "re_knn10": 0.16182545787580707,
+   "triangle_violation": 0.0,
+   "bias": -0.006313718847072212,
+   "dup_pairs_pred_median": 16.521036243946607,
+   "dup_pairs_over_median_nn": 0.7433454058012683
+  }
+ }
+}

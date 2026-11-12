@@ -1,0 +1,9 @@
+{
+ "key": "neuts_whalesounds",
+ "frozen_lab": "abl3_neuts_wd_v2_whalesounds",
+ "lab": "er_abl3_neuts_wd_v2_whalesounds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.1332144342589413,
+ "recall1_2pct": 0.14,
+ "recall10_2pct": 0.07599999999999998
+}

@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_lendb",
+  "method": "neuts",
+  "dataset": "lendb",
+  "run": "lendb",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "lendb_q100.npy",
+  "oracle": "lendb_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     20000,
+     540
+    ],
+    "dtype": "float32",
+    "sample_sha256": "2eb22ee41d4571c17df9de1c3c0f42d737cbf1893aecd872b487f14c75e5568e"
+   },
+   "valid": {
+    "shape": [
+     5000,
+     540
+    ],
+    "dtype": "float32",
+    "sample_sha256": "b18e1cb4462cdbf2efb381e58d18ddf4cfa49f0320f9d4743dd384ccbcdb6da4"
+   },
+   "test": {
+    "shape": [
+     5000,
+     540
+    ],
+    "dtype": "float32",
+    "sample_sha256": "a7d05771f8e73095355965b66e6808669548c0d0a23046fcce0585fb5f3dbfc4"
+   },
+   "db": {
+    "shape": [
+     60000,
+     540
+    ],
+    "dtype": "float32",
+    "sample_sha256": "d45ad5f8c2f68d8862e59b3f6d784f58ae4da461a88d99a9c10f93bff4506dd6"
+   },
+   "q": {
+    "shape": [
+     100,
+     540
+    ],
+    "dtype": "float32",
+    "sample_sha256": "7d36360ad5abc519ee7330f1365a48096ed5f41ec2f0c5b6c1586cf592b88dd8"
+   }
+  },
+  "oracle_sha256": "e0302cda4f6b8a3720d0b7e6e98b1648d84c4920dd9610cda1f93d5ce7774336"
+ },
+ "selected": {
+  "step": 1000,
+  "validation_recall_at_1": 0.07,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.6514507707223952,
+ "validation_scale": 0.0002268485550739357,
+ "test_pairs": 19992,
+ "queries": 100,
+ "database": 60000,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.02,
+  "0.01": 0.04,
+  "0.02": 0.07,
+  "0.05": 0.12,
+  "0.1": 0.2
+ },
+ "recall_at_10": {
+  "0.005": 0.016,
+  "0.01": 0.024000000000000007,
+  "0.02": 0.03700000000000001,
+  "0.05": 0.08999999999999997,
+  "0.1": 0.16299999999999992
+ }
+}

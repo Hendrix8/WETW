@@ -1,0 +1,22 @@
+{
+ "audiomnistds": {
+  "n_test": 2000,
+  "dtw_triangle_violation": 0.0001501802162595114,
+  "dtw_duplicate_pairs": 0,
+  "series_with_dtw_duplicate": 0,
+  "Direct MLP, + rank": {
+   "self_over_nn_median": 0.7347582550352993,
+   "self_over_nn_p90": 0.9156276904560977,
+   "share_self_ge_half_nn": 0.9965,
+   "share_self_ge_nn": 0.0295,
+   "self_rank_fail": 0.0,
+   "self_rank_mean_closer": 0.0,
+   "re_random": 0.06905797787755544,
+   "re_knn10": 0.11283411097962845,
+   "triangle_violation": 0.0,
+   "bias": -0.012950370907260957,
+   "dup_pairs_pred_median": null,
+   "dup_pairs_over_median_nn": null
+  }
+ }
+}

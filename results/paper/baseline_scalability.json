@@ -1,0 +1,378 @@
+{
+ "neuts|len|16000": {
+  "method": "neuts",
+  "axis": "len",
+  "x": 16000,
+  "r10": 0.032,
+  "r10_check": 0.032,
+  "verify_s": 25.65358695,
+  "order_sha256": "8e952929757a8e6d70ac08d972c3c990146386c1bfdbd4a6dc56736155395e7b"
+ },
+ "ldps|len|16000": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 16000,
+  "r10": 0.54,
+  "r10_check": 0.54,
+  "verify_s": 22.47665223
+ },
+ "cdps128|len|16000": {
+  "method": "cdps128",
+  "axis": "len",
+  "x": 16000,
+  "r10": 0.6090000000000001,
+  "r10_check": 0.6090000000000001,
+  "verify_s": 22.86191092
+ },
+ "rfdtan4|win|1": {
+  "method": "rfdtan4",
+  "axis": "win",
+  "x": 1,
+  "r10": 0.565,
+  "r10_check": 0.565,
+  "verify_s": 0.14602818
+ },
+ "cdps128|win|1": {
+  "method": "cdps128",
+  "axis": "win",
+  "x": 1,
+  "r10": 0.5830000000000001,
+  "r10_check": 0.5830000000000001,
+  "verify_s": 0.1274026
+ },
+ "rfdtan4|win|2.5": {
+  "method": "rfdtan4",
+  "axis": "win",
+  "x": 2.5,
+  "r10": 0.6179999999999999,
+  "r10_check": 0.6179999999999999,
+  "verify_s": 0.36100058
+ },
+ "cdps128|win|2.5": {
+  "method": "cdps128",
+  "axis": "win",
+  "x": 2.5,
+  "r10": 0.612,
+  "r10_check": 0.612,
+  "verify_s": 0.33187329
+ },
+ "rfdtan4|win|5": {
+  "method": "rfdtan4",
+  "axis": "win",
+  "x": 5,
+  "r10": 0.666,
+  "r10_check": 0.666,
+  "verify_s": 0.75447668
+ },
+ "ldps|win|5": {
+  "method": "ldps",
+  "axis": "win",
+  "x": 5,
+  "r10": 0.6399999999999999,
+  "r10_check": 0.6399999999999999,
+  "verify_s": 0.70353376
+ },
+ "cdps128|win|5": {
+  "method": "cdps128",
+  "axis": "win",
+  "x": 5,
+  "r10": 0.614,
+  "r10_check": 0.614,
+  "verify_s": 0.72556879
+ },
+ "rfdtan4|win|20": {
+  "method": "rfdtan4",
+  "axis": "win",
+  "x": 20,
+  "r10": 0.688,
+  "r10_check": 0.688,
+  "verify_s": 2.56022362
+ },
+ "neuts|win|20": {
+  "method": "neuts",
+  "axis": "win",
+  "x": 20,
+  "r10": 0.04100000000000001,
+  "r10_check": 0.04100000000000001,
+  "verify_s": 2.81065172,
+  "order_sha256": "0604d340176beff1b2fd0e7d2c71ed16f0553980a0f35bf445b72a483598e779"
+ },
+ "ldps|win|20": {
+  "method": "ldps",
+  "axis": "win",
+  "x": 20,
+  "r10": 0.6300000000000001,
+  "r10_check": 0.6300000000000001,
+  "verify_s": 2.51418145
+ },
+ "cdps128|win|20": {
+  "method": "cdps128",
+  "axis": "win",
+  "x": 20,
+  "r10": 0.6200000000000001,
+  "r10_check": 0.6200000000000001,
+  "verify_s": 2.55842714
+ },
+ "ldps|len|47998": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 47998,
+  "r10": 0.49499999999999994,
+  "r10_check": 0.49499999999999994,
+  "verify_s": 200.09352917
+ },
+ "ldps|size|3250": {
+  "method": "ldps",
+  "axis": "size",
+  "x": 3250,
+  "r10": 0.257,
+  "r10_check": 0.257,
+  "verify_s": 39.46093464
+ },
+ "ldps|size|6500": {
+  "method": "ldps",
+  "axis": "size",
+  "x": 6500,
+  "r10": 0.32799999999999996,
+  "r10_check": 0.32799999999999996,
+  "verify_s": 66.00318071
+ },
+ "ldps|size|13000": {
+  "method": "ldps",
+  "axis": "size",
+  "x": 13000,
+  "r10": 0.42300000000000004,
+  "r10_check": 0.42300000000000004,
+  "verify_s": 113.6305037
+ },
+ "neuts|win|5": {
+  "method": "neuts",
+  "axis": "win",
+  "x": 5,
+  "r10": 0.037000000000000005,
+  "r10_check": 0.037000000000000005,
+  "verify_s": 0.81092615,
+  "order_sha256": "a5838e65029c910766f474cbc33dc3ef48e860b0612b69b9654d85bc9d8a3a15"
+ },
+ "rfdtan4|len|4000": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 4000,
+  "r10": 0.582,
+  "r10_check": 0.582,
+  "verify_s": 1.51064817
+ },
+ "rfdtan4|len|1000": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 1000,
+  "r10": 0.48700000000000004,
+  "r10_check": 0.48700000000000004,
+  "verify_s": 0.10619937
+ },
+ "rfdtan4|len|2000": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 2000,
+  "r10": 0.49200000000000005,
+  "r10_check": 0.49200000000000005,
+  "verify_s": 0.39476766
+ },
+ "rfdtan4|len|8000": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 8000,
+  "r10": 0.672,
+  "r10_check": 0.672,
+  "verify_s": 5.8785368
+ },
+ "ldps|win|2.5": {
+  "method": "ldps",
+  "axis": "win",
+  "x": 2.5,
+  "r10": 0.623,
+  "r10_check": 0.623,
+  "verify_s": 0.31828529
+ },
+ "ldps|len|4000": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 4000,
+  "r10": 0.606,
+  "r10_check": 0.606,
+  "verify_s": 1.44800112
+ },
+ "rfdtan4|len|16000": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 16000,
+  "r10": 0.6139999999999999,
+  "r10_check": 0.6139999999999999,
+  "verify_s": 23.45378944,
+  "order_sha256": "6e183b986e698cd15b57df026914c5d857b6a13870cedf9e46b26a67687abb18"
+ },
+ "ldps|win|1": {
+  "method": "ldps",
+  "axis": "win",
+  "x": 1,
+  "r10": 0.609,
+  "r10_check": 0.609,
+  "verify_s": 0.12045342
+ },
+ "neuts|win|2.5": {
+  "method": "neuts",
+  "axis": "win",
+  "x": 2.5,
+  "r10": 0.041999999999999996,
+  "r10_check": 0.041999999999999996,
+  "verify_s": 0.39138203,
+  "order_sha256": "a221b7c5343b2b6028409710437d1a93785d5dfbc01199835434237cd19e58d7"
+ },
+ "cdps128|len|1000": {
+  "method": "cdps128",
+  "axis": "len",
+  "x": 1000,
+  "r10": 0.527,
+  "r10_check": 0.527,
+  "verify_s": 0.10524086,
+  "order_sha256": "085568dfdd48001ce1c312298b6c5ad671ddd1584b3d654dc97e3a4f42acef1d"
+ },
+ "cdps128|len|2000": {
+  "method": "cdps128",
+  "axis": "len",
+  "x": 2000,
+  "r10": 0.6409999999999999,
+  "r10_check": 0.6409999999999999,
+  "verify_s": 0.38344819,
+  "order_sha256": "3f3c458dfbc07fec27a654d69008f22854ae953cae3347883a85656b13a611d7"
+ },
+ "cdps128|len|4000": {
+  "method": "cdps128",
+  "axis": "len",
+  "x": 4000,
+  "r10": 0.622,
+  "r10_check": 0.622,
+  "verify_s": 1.4668364,
+  "order_sha256": "c5b325163b28dac43c2053e4780d232363d84e031a03aca0d7d0a96fcb83174b"
+ },
+ "cdps128|len|8000": {
+  "method": "cdps128",
+  "axis": "len",
+  "x": 8000,
+  "r10": 0.635,
+  "r10_check": 0.635,
+  "verify_s": 5.70064754,
+  "order_sha256": "1d84dc8ba4045a259166ff45e10544c45d884d5bc1e336a25bead3df838de860"
+ },
+ "neuts|len|1000": {
+  "method": "neuts",
+  "axis": "len",
+  "x": 1000,
+  "r10": 0.025,
+  "r10_check": 0.025,
+  "verify_s": 0.11416537,
+  "order_sha256": "4ec5678e9b2020014f019f144f5e7b34f28e4622049e890826b5503544ab4ba4"
+ },
+ "ldps|len|1000": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 1000,
+  "r10": 0.6930000000000001,
+  "r10_check": 0.6930000000000001,
+  "verify_s": 0.10372974,
+  "order_sha256": "0973b5d0a4ff40f7dddb64084c3d9366020e153cc9c2fbf623bfb8120c026c75"
+ },
+ "neuts|len|2000": {
+  "method": "neuts",
+  "axis": "len",
+  "x": 2000,
+  "r10": 0.022000000000000002,
+  "r10_check": 0.022000000000000002,
+  "verify_s": 0.4204211,
+  "order_sha256": "cd04121e02f339490a7fb1ca1e3902802b31cc62a1d55cd6ceae1733d3c2d1a1"
+ },
+ "ldps|len|2000": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 2000,
+  "r10": 0.6579999999999999,
+  "r10_check": 0.6579999999999999,
+  "verify_s": 0.38212511,
+  "order_sha256": "9c2a54668772f1a6dca7c2f5d5ecf179ae3e1e242c8004943a84fa9132794145"
+ },
+ "neuts|len|4000": {
+  "method": "neuts",
+  "axis": "len",
+  "x": 4000,
+  "r10": 0.034,
+  "r10_check": 0.034,
+  "verify_s": 1.61301055,
+  "order_sha256": "226b37e3a918997ff6e1a357d894c3e91232341c84ba49bde895d97f0817cfca"
+ },
+ "neuts|len|8000": {
+  "method": "neuts",
+  "axis": "len",
+  "x": 8000,
+  "r10": 0.04,
+  "r10_check": 0.04,
+  "verify_s": 6.37117142,
+  "order_sha256": "9cd41a56297193aa10a6d9a329ee80317ff8813f58397484da401a46066da756"
+ },
+ "ldps|len|8000": {
+  "method": "ldps",
+  "axis": "len",
+  "x": 8000,
+  "r10": 0.543,
+  "r10_check": 0.543,
+  "verify_s": 5.65664734,
+  "order_sha256": "047c12b5f4766e2587732a20109baf21b2349c79d24f46d023c3db0ea9ed7097"
+ },
+ "rfdtan4|len|47998": {
+  "method": "rfdtan4",
+  "axis": "len",
+  "x": 47998,
+  "r10": 0.342,
+  "r10_check": 0.342,
+  "verify_s": 220.41648257,
+  "order_sha256": "f2b6b65bc206e3e55742cb651ea02795724c6b25944d43f4937fbd67e36c25cd"
+ },
+ "neuts|win|1": {
+  "method": "neuts",
+  "axis": "win",
+  "x": 1,
+  "r10": 0.044,
+  "r10_check": 0.044,
+  "verify_s": 0.15611231,
+  "order_sha256": "8f96bb73f4434aff4babe6718033de25b6155c4aed6f510e42783baeb9faff66"
+ },
+ "rfdtan4|size|3250": {
+  "method": "rfdtan4",
+  "axis": "size",
+  "x": 3250,
+  "r10": 0.183,
+  "r10_check": 0.183,
+  "verify_s": 41.39338678,
+  "order_sha256": "289094c4d1fee2c605fc613c42934a24643e7f742222adbb73ff0e130001a11d",
+  "parent_order_sha256": "f2b6b65bc206e3e55742cb651ea02795724c6b25944d43f4937fbd67e36c25cd"
+ },
+ "rfdtan4|size|6500": {
+  "method": "rfdtan4",
+  "axis": "size",
+  "x": 6500,
+  "r10": 0.234,
+  "r10_check": 0.234,
+  "verify_s": 70.59188571,
+  "order_sha256": "30f8332459998b1c5c0693b39b3e0b130709eeef81e344cf5bab08ea9eb1a6de",
+  "parent_order_sha256": "f2b6b65bc206e3e55742cb651ea02795724c6b25944d43f4937fbd67e36c25cd"
+ },
+ "rfdtan4|size|13000": {
+  "method": "rfdtan4",
+  "axis": "size",
+  "x": 13000,
+  "r10": 0.279,
+  "r10_check": 0.279,
+  "verify_s": 123.13606075999999,
+  "order_sha256": "4785986e6aaaa4a3fb3024e6d60f0c310b4136620a59c3fa5ce48cf20db44de4",
+  "parent_order_sha256": "f2b6b65bc206e3e55742cb651ea02795724c6b25944d43f4937fbd67e36c25cd"
+ }
+}

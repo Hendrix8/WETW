@@ -1,0 +1,257 @@
+{
+  "tasks": [
+    {
+      "name": "am2k_L16000",
+      "length": 16000,
+      "window": 0.1,
+      "dataset": "audiomnist_L16000"
+    },
+    {
+      "name": "am2k_L8000",
+      "length": 8000,
+      "window": 0.1,
+      "dataset": "audiomnist_L8000"
+    },
+    {
+      "name": "am2k_L4000",
+      "length": 4000,
+      "window": 0.1,
+      "dataset": "audiomnist_L4000"
+    },
+    {
+      "name": "am2k_L2000",
+      "length": 2000,
+      "window": 0.1,
+      "dataset": "audiomnist_L2000"
+    },
+    {
+      "name": "am2k_L1000",
+      "length": 1000,
+      "window": 0.1,
+      "dataset": "audiomnist_L1000"
+    },
+    {
+      "name": "am2k_L47998",
+      "length": 47998,
+      "window": 0.1,
+      "dataset": "audiomnist_L47998"
+    },
+    {
+      "name": "am2k_L4000_w0.2",
+      "length": 4000,
+      "window": 0.2,
+      "dataset": "audiomnist_L4000_w0.2"
+    },
+    {
+      "name": "am2k_L4000_w0.05",
+      "length": 4000,
+      "window": 0.05,
+      "dataset": "audiomnist_L4000_w0.05"
+    },
+    {
+      "name": "am2k_L4000_w0.025",
+      "length": 4000,
+      "window": 0.025,
+      "dataset": "audiomnist_L4000_w0.025"
+    },
+    {
+      "name": "am2k_L4000_w0.01",
+      "length": 4000,
+      "window": 0.01,
+      "dataset": "audiomnist_L4000_w0.01"
+    }
+  ],
+  "encoder_grid": [
+    {
+      "optimizer": "sgd",
+      "lr": 0.0,
+      "batch": 16,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "sgd",
+      "lr": 0.0001,
+      "batch": 16,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "sgd",
+      "lr": 0.001,
+      "batch": 32,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "adamw",
+      "lr": 1e-05,
+      "batch": 32,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "adamw",
+      "lr": 0.0001,
+      "batch": 32,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "adamw",
+      "lr": 0.0003,
+      "batch": 64,
+      "decay": 0.01,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "adamw",
+      "lr": 0.0001,
+      "batch": 16,
+      "decay": 0.001,
+      "ed_weight": 0.0
+    },
+    {
+      "optimizer": "adamw",
+      "lr": 0.0001,
+      "batch": 64,
+      "decay": 0.01,
+      "ed_weight": 0.25
+    }
+  ],
+  "head_grid": [
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.0003,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.003,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 0.3,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 3.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.05,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.2,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.0,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.9,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 0.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 2000,
+      "delta": 0.05,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 64,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 256,
+      "delta": 0.1,
+      "batch": 4096
+    },
+    {
+      "lr": 0.001,
+      "rank_weight": 1.0,
+      "margin": 0.1,
+      "hard_fraction": 0.5,
+      "hard_rank": 1024,
+      "delta": 0.1,
+      "batch": 4096
+    }
+  ],
+  "pilot_task": 2,
+  "encoder_pilot_steps": 100,
+  "encoder_pilot_head_steps": 1000,
+  "head_pilot_steps": 5000,
+  "production_encoder_steps": 1000,
+  "validation_protocol": "validation pool only; R@10 at 2% first, R@1 at 2% tie break; same 2% as Figure 6",
+  "note": "Warm-started encoder tuning; same architecture, 128 coordinates, splits and DTW targets. Length 48K model is reused for all database-size points. No test-based selection."
+}

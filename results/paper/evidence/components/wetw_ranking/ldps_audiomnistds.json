@@ -1,0 +1,9 @@
+{
+ "key": "ldps_audiomnistds",
+ "frozen_lab": "devq_abl3_ldps_wd_audiomnistds",
+ "lab": "er_devq_abl3_ldps_wd_audiomnistds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.11978364991486735,
+ "recall1_2pct": 0.82,
+ "recall10_2pct": 0.695
+}

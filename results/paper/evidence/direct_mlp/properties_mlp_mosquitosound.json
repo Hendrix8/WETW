@@ -1,0 +1,22 @@
+{
+ "mosquitosound": {
+  "n_test": 10000,
+  "dtw_triangle_violation": 0.00010003000900270081,
+  "dtw_duplicate_pairs": 0,
+  "series_with_dtw_duplicate": 0,
+  "Direct MLP, + rank": {
+   "self_over_nn_median": 0.6170339279914853,
+   "self_over_nn_p90": 0.7294514913157767,
+   "share_self_ge_half_nn": 0.8857,
+   "share_self_ge_nn": 0.0032,
+   "self_rank_fail": 0.0,
+   "self_rank_mean_closer": 0.0,
+   "re_random": 0.0713797840834357,
+   "re_knn10": 0.11253814990713219,
+   "triangle_violation": 0.0,
+   "bias": -0.009062012220975808,
+   "dup_pairs_pred_median": null,
+   "dup_pairs_over_median_nn": null
+  }
+ }
+}

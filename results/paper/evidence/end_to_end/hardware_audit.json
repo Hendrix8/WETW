@@ -1,0 +1,8 @@
+{
+ "cpu_counts": {
+  "AMD EPYC 7543 32-Core Processor": 92,
+  "not recorded (LB_Keogh / LB_Webb exact searches)": 16
+ },
+ "normalization_factor": 1.0,
+ "reason": "Every end-to-end record that states its CPU reports the same model; timings use one thread per query and need no normalization."
+}

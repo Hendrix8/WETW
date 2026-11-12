@@ -1,0 +1,60 @@
+{
+ "per_dataset": {
+  "whalesounds": {
+   "re": 0.239190608699157,
+   "r1": 0.05,
+   "se": 0.021794494717703367,
+   "selected_step": 1000
+  },
+  "cornellwhalechallenge": {
+   "re": 0.24448184792764113,
+   "r1": 0.02,
+   "se": 0.014,
+   "selected_step": 1000
+  },
+  "audiomnistds": {
+   "re": 0.6142396398178698,
+   "r1": 0.03,
+   "se": 0.01705872210923198,
+   "selected_step": 0
+  },
+  "dreamera": {
+   "re": 0.22044005378106715,
+   "r1": 0.14,
+   "se": 0.03469870314579494,
+   "selected_step": 3000
+  },
+  "lendb": {
+   "re": 0.6514507707223952,
+   "r1": 0.07,
+   "se": 0.02551470164434615,
+   "selected_step": 1000
+  },
+  "w01_seismic": {
+   "re": 0.21680930946121346,
+   "r1": 0.23,
+   "se": 0.042083250825001625,
+   "selected_step": 1000
+  },
+  "mosquitosound": {
+   "re": 0.28009964805772053,
+   "r1": 0.03,
+   "se": 0.01705872210923198,
+   "selected_step": 300
+  },
+  "fruitflies": {
+   "re": 0.3345316527673115,
+   "r1": 0.02,
+   "se": 0.014,
+   "selected_step": 300
+  }
+ },
+ "mean_abs_re": 0.350155441404297,
+ "mean_recall_at_1_2pct": 0.07375000000000001,
+ "se_mean_recall": 0.00890487928048438,
+ "average_euclidean_L": [
+  0.2169071635195746,
+  0.47125000000000006
+ ],
+ "se_rule": "sqrt(sum_i p_i(1-p_i)/100)/8, binomial over 100 queries per collection"
+}

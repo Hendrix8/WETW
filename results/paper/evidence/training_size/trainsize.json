@@ -1,0 +1,232 @@
+{
+ "pair_seconds": {
+  "dreamera": {
+   "L": 256,
+   "pairs": 3000,
+   "sec_per_pair": 8.401668909937143e-05
+  },
+  "whalesounds": {
+   "L": 2500,
+   "pairs": 300,
+   "sec_per_pair": 0.0062846152701725565
+  },
+  "cornellwhalechallenge": {
+   "L": 4000,
+   "pairs": 300,
+   "sec_per_pair": 0.016014397370939452
+  }
+ },
+ "rows": [
+  {
+   "lab": "dreamera",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.29,
+   "r10": 0.271,
+   "ed_r1": 0.29,
+   "ed_r10": 0.271,
+   "fit_h": 0.021885414719581605
+  },
+  {
+   "lab": "dreamera",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.35,
+   "r10": 0.3050000000000001,
+   "ed_r1": 0.35,
+   "ed_r10": 0.3050000000000001,
+   "fit_h": 0.021882836752467685
+  },
+  {
+   "lab": "dreamera",
+   "n": 1000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.31,
+   "r10": 0.34800000000000003,
+   "ed_r1": 0.33,
+   "ed_r10": 0.3060000000000001,
+   "fit_h": 0.020342706905470954
+  },
+  {
+   "lab": "dreamera",
+   "n": 2000,
+   "selected": "ed_reg",
+   "r1": 0.39,
+   "r10": 0.42100000000000004,
+   "ed_r1": 0.39,
+   "ed_r10": 0.42100000000000004,
+   "fit_h": 0.012411085632112292
+  },
+  {
+   "lab": "dreamera",
+   "n": 5000,
+   "selected": "ed_reg",
+   "r1": 0.51,
+   "r10": 0.48699999999999993,
+   "ed_r1": 0.51,
+   "ed_r10": 0.48699999999999993,
+   "fit_h": 0.018891668253474766
+  },
+  {
+   "lab": "dreamera",
+   "n": 10000,
+   "selected": "ed_reg",
+   "r1": 0.64,
+   "r10": 0.548,
+   "ed_r1": 0.64,
+   "ed_r10": 0.548,
+   "fit_h": 0.028203507595592075
+  },
+  {
+   "lab": "whalesounds",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.2,
+   "r10": 0.20200000000000004,
+   "ed_r1": 0.2,
+   "ed_r10": 0.20200000000000004,
+   "fit_h": 0.6062605205509398
+  },
+  {
+   "lab": "whalesounds",
+   "n": 500,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.3,
+   "r10": 0.395,
+   "ed_r1": 0.19,
+   "ed_r10": 0.19200000000000003,
+   "fit_h": 0.5053382368882497
+  },
+  {
+   "lab": "whalesounds",
+   "n": 1000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.68,
+   "r10": 0.6789999999999999,
+   "ed_r1": 0.18,
+   "ed_r10": 0.183,
+   "fit_h": 0.4889931215842565
+  },
+  {
+   "lab": "whalesounds",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.81,
+   "r10": 0.7419999999999999,
+   "ed_r1": 0.17,
+   "ed_r10": 0.182,
+   "fit_h": 0.4764900906218423
+  },
+  {
+   "lab": "whalesounds",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.86,
+   "r10": 0.764,
+   "ed_r1": 0.18,
+   "ed_r10": 0.188,
+   "fit_h": 0.7727542816268074
+  },
+  {
+   "lab": "whalesounds",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.84,
+   "r10": 0.785,
+   "ed_r1": 0.19,
+   "ed_r10": 0.18700000000000003,
+   "fit_h": 0.5812059368027581
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.43,
+   "r10": 0.369,
+   "ed_r1": 0.43,
+   "ed_r10": 0.369,
+   "fit_h": 0.3916712807284461
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.4,
+   "r10": 0.358,
+   "ed_r1": 0.4,
+   "ed_r10": 0.358,
+   "fit_h": 0.50045819984542
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 1000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.38,
+   "r10": 0.36,
+   "ed_r1": 0.42,
+   "ed_r10": 0.322,
+   "fit_h": 0.4394880360364914
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.55,
+   "r10": 0.5169999999999999,
+   "ed_r1": 0.35,
+   "ed_r10": 0.327,
+   "fit_h": 0.6115657114982604
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.7,
+   "r10": 0.5950000000000001,
+   "ed_r1": 0.3,
+   "ed_r10": 0.309,
+   "fit_h": 0.7993213931719462
+  },
+  {
+   "lab": "cornellwhalechallenge",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.71,
+   "r10": 0.5720000000000001,
+   "ed_r1": 0.32,
+   "ed_r10": 0.306,
+   "fit_h": 1.2264788252777523
+  }
+ ],
+ "full": {
+  "dreamera": {
+   "r1": 0.87,
+   "r10": 0.7820000000000001,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "fit_h": 0.05550921426879035
+  },
+  "whalesounds": {
+   "r1": 0.85,
+   "r10": 0.769,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "fit_h": 1.1678798552354177
+  },
+  "cornellwhalechallenge": {
+   "r1": 0.65,
+   "r10": 0.561,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "fit_h": 1.1464967216385735
+  }
+ },
+ "db": {
+  "dreamera": 60000,
+  "whalesounds": 40000,
+  "cornellwhalechallenge": 24500
+ },
+ "full_n": {
+  "dreamera": 20000,
+  "whalesounds": 30000,
+  "cornellwhalechallenge": 20000
+ },
+ "note": "recall at a 2% shortlist, validation-selected head, 100 queries, one seed; full-size recall = paper Full arm (archlight std_eval/refine), full-size training time = main study fit (A100); subsets trained on an A100; pair_seconds: dtaidistance distance_fast, one thread, measured Nov 4"
+}

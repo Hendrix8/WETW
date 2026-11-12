@@ -1,0 +1,99 @@
+{
+ "rows": [
+  {
+   "lab": "audiomnistds",
+   "n": 250,
+   "fit_h": 0.28678305486838024,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 500,
+   "fit_h": 0.34191892584164935,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 1000,
+   "fit_h": 0.3854623978005515,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 2000,
+   "fit_h": 0.46006384776698217,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 250,
+   "fit_h": 0.015743369592560664,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 500,
+   "fit_h": 0.036043532490730286,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 1000,
+   "fit_h": 0.02824326561556922,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 2000,
+   "fit_h": 0.02224629561106364,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 5000,
+   "fit_h": 0.032748911844359505,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  },
+  {
+   "lab": "lendb",
+   "n": 10000,
+   "fit_h": 0.047672589156362744,
+   "source": "result.json",
+   "gpu": "NVIDIA A100 80GB PCIe"
+  }
+ ],
+ "pair_seconds": {
+  "audiomnistds": {
+   "L": 4000,
+   "pairs": 300,
+   "sec_per_pair": 0.019216425934185585,
+   "elapsed_s": 5.764927780255675,
+   "window": 400,
+   "host": "cluster",
+   "threads": 1,
+   "library": "dtaidistance.distance_fast",
+   "source_data_dir": "samples_random0.1_npy"
+  },
+  "lendb": {
+   "L": 540,
+   "pairs": 300,
+   "sec_per_pair": 0.0003245560141901175,
+   "elapsed_s": 0.09736680425703526,
+   "window": 54,
+   "host": "cluster",
+   "threads": 1,
+   "library": "dtaidistance.distance_fast",
+   "source_data_dir": "samples_random0.1_npy"
+  }
+ },
+ "retrieved_utc": "2026-11-05T00:41:48.551374+00:00"
+}

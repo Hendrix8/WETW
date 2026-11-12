@@ -1,0 +1,298 @@
+{
+ "rows": [
+  {
+   "lab": "audiomnistds",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.88,
+   "r10": 0.7460000000000001,
+   "ed_r1": 0.88,
+   "fit_h": 0.28678305486838024
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.89,
+   "r10": 0.762,
+   "ed_r1": 0.89,
+   "fit_h": 0.34191892584164935
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 1000,
+   "selected": "ed_reg",
+   "r1": 0.85,
+   "r10": 0.748,
+   "ed_r1": 0.85,
+   "fit_h": 0.3854623978005515
+  },
+  {
+   "lab": "audiomnistds",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.9,
+   "r10": 0.807,
+   "ed_r1": 0.84,
+   "fit_h": 0.46006384776698217
+  },
+  {
+   "lab": "lendb",
+   "n": 250,
+   "selected": "mlp_w_reg",
+   "r1": 0.59,
+   "r10": 0.579,
+   "ed_r1": 0.64,
+   "fit_h": 0.015743369592560664
+  },
+  {
+   "lab": "lendb",
+   "n": 500,
+   "selected": "mlp_w_reg",
+   "r1": 0.68,
+   "r10": 0.6139999999999999,
+   "ed_r1": 0.71,
+   "fit_h": 0.036043532490730286
+  },
+  {
+   "lab": "lendb",
+   "n": 1000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.81,
+   "r10": 0.7270000000000002,
+   "ed_r1": 0.77,
+   "fit_h": 0.02824326561556922
+  },
+  {
+   "lab": "lendb",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.92,
+   "r10": 0.85,
+   "ed_r1": 0.89,
+   "fit_h": 0.02224629561106364
+  },
+  {
+   "lab": "lendb",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.95,
+   "r10": 0.934,
+   "ed_r1": 0.91,
+   "fit_h": 0.032748911844359505
+  },
+  {
+   "lab": "lendb",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.99,
+   "r10": 0.9520000000000002,
+   "ed_r1": 0.94,
+   "fit_h": 0.047672589156362744
+  },
+  {
+   "lab": "seismic",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.57,
+   "r10": 0.5549999999999999,
+   "ed_r1": 0.57,
+   "fit_h": 0.4184332410494486
+  },
+  {
+   "lab": "seismic",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.59,
+   "r10": 0.615,
+   "ed_r1": 0.59,
+   "fit_h": 0.26778282033072576
+  },
+  {
+   "lab": "seismic",
+   "n": 1000,
+   "selected": "ed_reg",
+   "r1": 0.57,
+   "r10": 0.55,
+   "ed_r1": 0.57,
+   "fit_h": 0.1762395899825626
+  },
+  {
+   "lab": "seismic",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.81,
+   "r10": 0.7190000000000001,
+   "ed_r1": 0.66,
+   "fit_h": 0.13726348327265844
+  },
+  {
+   "lab": "seismic",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.83,
+   "r10": 0.8,
+   "ed_r1": 0.74,
+   "fit_h": 0.09667154722743564
+  },
+  {
+   "lab": "seismic",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.9,
+   "r10": 0.863,
+   "ed_r1": 0.78,
+   "fit_h": 0.10269573483202192
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.61,
+   "r10": 0.474,
+   "ed_r1": 0.61,
+   "fit_h": 0.6169645728005303
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.65,
+   "r10": 0.5479999999999999,
+   "ed_r1": 0.65,
+   "fit_h": 0.6217725380924013
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 1000,
+   "selected": "ed_reg",
+   "r1": 0.67,
+   "r10": 0.573,
+   "ed_r1": 0.67,
+   "fit_h": 0.6898494587341945
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 2000,
+   "selected": "ed_reg",
+   "r1": 0.73,
+   "r10": 0.608,
+   "ed_r1": 0.73,
+   "fit_h": 0.7314422039853202
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.88,
+   "r10": 0.815,
+   "ed_r1": 0.72,
+   "fit_h": 1.2018792396783828
+  },
+  {
+   "lab": "mosquitosound",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.86,
+   "r10": 0.7809999999999999,
+   "ed_r1": 0.72,
+   "fit_h": 1.3799317718214459
+  },
+  {
+   "lab": "fruitflies",
+   "n": 250,
+   "selected": "ed_reg",
+   "r1": 0.68,
+   "r10": 0.633,
+   "ed_r1": 0.68,
+   "fit_h": 0.5788628245062298
+  },
+  {
+   "lab": "fruitflies",
+   "n": 500,
+   "selected": "ed_reg",
+   "r1": 0.73,
+   "r10": 0.6549999999999998,
+   "ed_r1": 0.73,
+   "fit_h": 0.4635350822740131
+  },
+  {
+   "lab": "fruitflies",
+   "n": 1000,
+   "selected": "ed_reg",
+   "r1": 0.76,
+   "r10": 0.664,
+   "ed_r1": 0.76,
+   "fit_h": 0.6010414615604612
+  },
+  {
+   "lab": "fruitflies",
+   "n": 2000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.76,
+   "r10": 0.6820000000000002,
+   "ed_r1": 0.77,
+   "fit_h": 0.846022184756067
+  },
+  {
+   "lab": "fruitflies",
+   "n": 5000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.89,
+   "r10": 0.86,
+   "ed_r1": 0.81,
+   "fit_h": 1.1524544273482429
+  },
+  {
+   "lab": "fruitflies",
+   "n": 10000,
+   "selected": "mlp_w_reg+logrank1_m0.1",
+   "r1": 0.85,
+   "r10": 0.8070000000000002,
+   "ed_r1": 0.78,
+   "fit_h": 1.4633149998055563
+  }
+ ],
+ "full": {
+  "audiomnistds": {
+   "r1": 0.94,
+   "r10": 0.8100000000000002,
+   "selected": "mlp_w_reg+logrank1_m0.1"
+  },
+  "lendb": {
+   "r1": 0.99,
+   "r10": 0.9690000000000001,
+   "selected": "mlp_w_reg+logrank1_m0.1"
+  },
+  "seismic": {
+   "r1": 0.98,
+   "r10": 0.9610000000000002,
+   "selected": "mlp_w_reg+logrank1_m0.1"
+  },
+  "mosquitosound": {
+   "r1": 0.87,
+   "r10": 0.818,
+   "selected": "mlp_w_reg+logrank1_m0.1"
+  },
+  "fruitflies": {
+   "r1": 0.95,
+   "r10": 0.861,
+   "selected": "mlp_w_reg+logrank1_m0.1"
+  }
+ },
+ "full_n": {
+  "lendb": 20000,
+  "audiomnistds": 5000,
+  "seismic": 100000,
+  "mosquitosound": 50000,
+  "fruitflies": 20000
+ },
+ "db": {
+  "lendb": 60000,
+  "audiomnistds": 20900,
+  "seismic": 840000,
+  "mosquitosound": 60000,
+  "fruitflies": 26759
+ },
+ "note": "wesee_trainsize2_20261104; full = the Full model of the tables. Rebuild from ts2u/ts2n as runs land"
+}

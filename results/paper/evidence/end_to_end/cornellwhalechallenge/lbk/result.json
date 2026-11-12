@@ -1,0 +1,30 @@
+{
+  "method": "lbk",
+  "lab": "cornellwhalechallenge",
+  "seconds_mean": 65.568465,
+  "cascade": {
+    "mode": "lbk",
+    "pruned_webb": 0.0,
+    "limit": 24500,
+    "N": 24500,
+    "L": 4000,
+    "r": 399,
+    "wfrac": 0.1,
+    "k": 10,
+    "n_queries": 20,
+    "load_s": 0.446,
+    "db_envelope_s": 22.405,
+    "sec_per_query_mean": 65.568465,
+    "sec_per_query_min": 3.990666,
+    "sec_per_query_max": 81.813105,
+    "qps": 0.0153,
+    "pruned_kim": 0.0,
+    "pruned_keogh_eq": 0.050169,
+    "pruned_keogh_ec": 0.0,
+    "dtw_computed": 0.949831,
+    "dtw_completed_improving": 0.00357959
+  },
+  "rel_err": 0.0,
+  "exact_usp_seconds": 64.569424,
+  "queries": 20
+}

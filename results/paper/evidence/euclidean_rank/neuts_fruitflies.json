@@ -1,0 +1,87 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_fruitflies",
+  "method": "neuts",
+  "dataset": "fruitflies",
+  "run": "fruitflies",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "fruitflies_q100.npy",
+  "oracle": "fruitflies_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     20000,
+     5000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "fe7712b18f109143bcab5037a6710b695e5c3da0044b6c991a68f7436dcc58e4"
+   },
+   "valid": {
+    "shape": [
+     6759,
+     5000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "8350603c1488aef12ff675478692676152fb66ec5ab72e345699c95afcd47238"
+   },
+   "test": {
+    "shape": [
+     6759,
+     5000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "93fd09e1cb6954b16cf60d49781ce3c8a7b13647876ba3483f7919e9f9a0ac83"
+   },
+   "db": {
+    "shape": [
+     26759,
+     5000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "ac2cca20fe97ab91884d6022f7d0b521e29a58af463bb40aae67dbb9ed45ca79"
+   },
+   "q": {
+    "shape": [
+     100,
+     5000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "e4b3c94495f9d464e3bce7dae0b794b6645d024e180376be9d1207f4c60bc6bc"
+   }
+  },
+  "oracle_sha256": "54b8b4837061497d6faa16a13a43563e15294aa952bcdd23b4fb3ee6b721c802"
+ },
+ "selected": {
+  "step": 300,
+  "validation_recall_at_1": 0.04,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.3345316527673115,
+ "validation_scale": 0.010726521042397059,
+ "test_pairs": 19997,
+ "queries": 100,
+ "database": 26759,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.0,
+  "0.01": 0.01,
+  "0.02": 0.02,
+  "0.05": 0.04,
+  "0.1": 0.05
+ },
+ "recall_at_10": {
+  "0.005": 0.006,
+  "0.01": 0.015,
+  "0.02": 0.023000000000000003,
+  "0.05": 0.048,
+  "0.1": 0.09199999999999994
+ },
+ "embeddings_host": "cluster (Quadro RTX 6000), 28 aligned batch-8 shards; worker.py search; matches cluster emb_valid rows 0-800 within 6e-7"
+}

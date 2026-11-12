@@ -1,0 +1,41 @@
+# RF-DTAN Configuration matching WETW defaults
+
+dataset:
+  dataset_name: "CBF"
+  # Paths will be overridden by batch script
+  dataset_fp: null 
+  processed_fp: null
+  dim_series: null
+  warping_window: 0.1
+
+model:
+  backbone: "InceptionTime"
+  tess_size: 16
+  n_recurrences: 1
+  zero_boundary: true
+  dim_emb: 64
+
+training:
+  batch_size: 128
+  n_epochs: 500
+  lr: 0.0005
+  time_limit_hours: 0
+  no_validation: false
+  val_split: 0.2
+  scale_dists: true
+
+evaluation:
+  rel_error_recenter_mode: "translate"
+  rel_error_recenter_scale_from: "valid"
+  rel_error_recenter_scale_method: "mean_rel_zero"
+  pairwise_protocol: true
+  max_pairs: 1000000
+
+system:
+  device: "cuda"
+  seed: 42
+  wandb_project: "dtwrl_baselines"
+  wandb_mode: "online"
+
+paths:
+  exps_dir: "./outputs_rfdtan"

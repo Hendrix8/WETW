@@ -1,0 +1,9 @@
+{
+ "key": "neuts_w01_seismic",
+ "frozen_lab": "abl3_neuts_wd_v2_w01_seismic",
+ "lab": "er_abl3_neuts_wd_v2_w01_seismic",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.12030718443559867,
+ "recall1_2pct": 0.37,
+ "recall10_2pct": 0.33699999999999997
+}

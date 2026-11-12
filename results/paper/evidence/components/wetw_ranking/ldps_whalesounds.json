@@ -1,0 +1,9 @@
+{
+ "key": "ldps_whalesounds",
+ "frozen_lab": "devq_abl3_ldps_wd_whalesounds",
+ "lab": "er_devq_abl3_ldps_wd_whalesounds",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.08115515836021561,
+ "recall1_2pct": 0.72,
+ "recall10_2pct": 0.667
+}

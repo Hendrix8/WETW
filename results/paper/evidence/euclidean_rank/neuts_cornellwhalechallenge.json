@@ -1,0 +1,86 @@
+{
+ "complete": true,
+ "task": {
+  "key": "neuts_cornellwhalechallenge",
+  "method": "neuts",
+  "dataset": "cornellwhalechallenge",
+  "run": "cornellwhalechallenge",
+  "data": "samples_random0.1_npy",
+  "database": "db.npy",
+  "queries": "cornellwhalechallenge_q100.npy",
+  "oracle": "cornellwhalechallenge_exact100.nn.bin",
+  "targets": null,
+  "missing": [],
+  "host": "cluster",
+  "input_signatures": {
+   "train": {
+    "shape": [
+     20000,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "3be2e0ae2fa36170fbe8a05caa74beaf0e87ca2408257d8eaa937bf768e47ede"
+   },
+   "valid": {
+    "shape": [
+     4500,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "7014ca536f34cb086a3abb11bd61974419be19c89d5bcf3ff70747b36ff70dc1"
+   },
+   "test": {
+    "shape": [
+     4500,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "7869bb59c8bfca08905ed0029e12b8a062af3f7ad08a57f8bcd82ad3f0aacc41"
+   },
+   "db": {
+    "shape": [
+     24500,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "6d720f6671f382f40d285ef654c485ebaf03c573f3911a66f93fb1de62cf56e1"
+   },
+   "q": {
+    "shape": [
+     100,
+     4000
+    ],
+    "dtype": "float32",
+    "sample_sha256": "ebc072493830aa553659dc327f92c88997b89dce0d0a84db8880881e28c404a9"
+   }
+  },
+  "oracle_sha256": "062c611cfe1eee9ffef85e80548b7e4d08d516787d722d10f315e347bfb0bf33"
+ },
+ "selected": {
+  "step": 1000,
+  "validation_recall_at_1": 0.05,
+  "queries": 100,
+  "pool": 1900
+ },
+ "mean_abs_re": 0.24448184792764113,
+ "validation_scale": 0.006585017099379357,
+ "test_pairs": 19994,
+ "queries": 100,
+ "database": 24500,
+ "scoring": "Euclidean",
+ "encoder_refined": true,
+ "recall_at_1": {
+  "0.005": 0.02,
+  "0.01": 0.02,
+  "0.02": 0.02,
+  "0.05": 0.08,
+  "0.1": 0.13
+ },
+ "recall_at_10": {
+  "0.005": 0.004,
+  "0.01": 0.006999999999999999,
+  "0.02": 0.023000000000000007,
+  "0.05": 0.05599999999999998,
+  "0.1": 0.12399999999999987
+ }
+}

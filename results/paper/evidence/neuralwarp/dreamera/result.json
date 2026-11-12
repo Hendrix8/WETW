@@ -1,0 +1,86 @@
+{
+  "method": "neuralwarp",
+  "lab": "dreamera",
+  "N": 60000,
+  "paa": 1,
+  "wfrac": 0.1,
+  "curve": [
+    {
+      "rho": 0.005,
+      "recall_at_1": 0.14,
+      "recall_at_10": 0.128,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.009523899999999998,
+      "seconds": 23.051260849537883
+    },
+    {
+      "rho": 0.01,
+      "recall_at_1": 0.19,
+      "recall_at_10": 0.179,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.017935150000000004,
+      "seconds": 23.05967209953788
+    },
+    {
+      "rho": 0.02,
+      "recall_at_1": 0.24,
+      "recall_at_10": 0.252,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.03449555,
+      "seconds": 23.07623249953788
+    },
+    {
+      "rho": 0.05,
+      "recall_at_1": 0.36,
+      "recall_at_10": 0.387,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.0829683,
+      "seconds": 23.124705249537882
+    },
+    {
+      "rho": 0.1,
+      "recall_at_1": 0.52,
+      "recall_at_10": 0.52,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.15922285000000003,
+      "seconds": 23.20095979953788
+    },
+    {
+      "rho": 0.2,
+      "recall_at_1": 0.7,
+      "recall_at_10": 0.675,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.29954034999999996,
+      "seconds": 23.341277299537882
+    },
+    {
+      "rho": 0.3,
+      "recall_at_1": 0.8,
+      "recall_at_10": 0.784,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.3987591,
+      "seconds": 23.44049604953788
+    },
+    {
+      "rho": 0.4,
+      "recall_at_1": 0.9,
+      "recall_at_10": 0.864,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.4719746000000001,
+      "seconds": 23.51371154953788
+    },
+    {
+      "rho": 0.5,
+      "recall_at_1": 0.94,
+      "recall_at_10": 0.92,
+      "rank_s": 23.04173694953788,
+      "verify_s": 0.55946465,
+      "seconds": 23.60120159953788
+    }
+  ],
+  "queries_recall": 100,
+  "queries_timed": 20,
+  "gpu": "NVIDIA A100",
+  "cpu": "one thread per query",
+  "checkpoint_note": "Validation-selected WarpDistill checkpoint; ranks on an A100 GPU, verification on the CPU timing server"
+}

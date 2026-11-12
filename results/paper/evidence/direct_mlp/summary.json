@@ -1,0 +1,98 @@
+{
+ "whalesounds": {
+  "kappa_wetw": 20,
+  "kappa_mlp": 10,
+  "r1_wetw": 0.89,
+  "r1_mlp": 0.89,
+  "self_wetw": 1.0,
+  "self_mlp": 0.999,
+  "ratio_wetw": 5.3377230262726625e-06,
+  "ratio_mlp": 0.5764701601561278,
+  "re_mlp_fidelity": 0.06596637230341054
+ },
+ "cornellwhalechallenge": {
+  "kappa_wetw": 20,
+  "kappa_mlp": 20,
+  "r1_wetw": 0.91,
+  "r1_mlp": 0.85,
+  "self_wetw": 1.0,
+  "self_mlp": 1.0,
+  "ratio_wetw": 1.6232962066078097e-06,
+  "ratio_mlp": 0.48716047427251136,
+  "re_mlp_fidelity": 0.06472862875809866
+ },
+ "audiomnistds": {
+  "kappa_wetw": 5,
+  "kappa_mlp": 3,
+  "r1_wetw": 0.98,
+  "r1_mlp": 0.96,
+  "self_wetw": 1.0,
+  "self_mlp": 1.0,
+  "ratio_wetw": 7.315568893375811e-06,
+  "ratio_mlp": 0.7347582550352993,
+  "re_mlp_fidelity": 0.06939494793050596
+ },
+ "dreamera": {
+  "kappa_wetw": 10,
+  "kappa_mlp": 3,
+  "r1_wetw": 0.85,
+  "r1_mlp": 0.84,
+  "self_wetw": 1.0,
+  "self_mlp": 0.984,
+  "ratio_wetw": 3.1711612245071696e-07,
+  "ratio_mlp": 0.669304321397363,
+  "re_mlp_fidelity": 0.046881558099617575
+ },
+ "lendb": {
+  "kappa_wetw": 5,
+  "kappa_mlp": 3,
+  "r1_wetw": 1.0,
+  "r1_mlp": 1.0,
+  "self_wetw": 1.0,
+  "self_mlp": 1.0,
+  "ratio_wetw": 8.568133883583181e-07,
+  "ratio_mlp": 0.6520086386334798,
+  "re_mlp_fidelity": 0.05562891955509764
+ },
+ "w01_seismic": {
+  "kappa_wetw": 5,
+  "kappa_mlp": 5,
+  "r1_wetw": 0.99,
+  "r1_mlp": 0.98,
+  "self_wetw": 1.0,
+  "self_mlp": 0.992,
+  "ratio_wetw": 3.43464662215772e-07,
+  "ratio_mlp": 0.517223218307125,
+  "re_mlp_fidelity": 0.03689285366427815
+ },
+ "mosquitosound": {
+  "kappa_wetw": 5,
+  "kappa_mlp": 3,
+  "r1_wetw": 0.98,
+  "r1_mlp": 0.94,
+  "self_wetw": 1.0,
+  "self_mlp": 1.0,
+  "ratio_wetw": 3.4379739755334055e-06,
+  "ratio_mlp": 0.6170339279914853,
+  "re_mlp_fidelity": 0.07247427210466663
+ },
+ "fruitflies": {
+  "kappa_wetw": 5,
+  "kappa_mlp": 3,
+  "r1_wetw": 0.98,
+  "r1_mlp": 0.96,
+  "self_wetw": 1.0,
+  "self_mlp": 1.0,
+  "ratio_wetw": 6.207761498374749e-06,
+  "ratio_mlp": 0.7827843747412181,
+  "re_mlp_fidelity": 0.07509051286839707
+ },
+ "average": {
+  "r1_wetw": 0.9475,
+  "r1_mlp": 0.9275,
+  "self_wetw": 1.0,
+  "self_mlp": 0.996875,
+  "ratio_wetw": 3.1799647216486556e-06,
+  "ratio_mlp": 0.6295929213168262
+ }
+}

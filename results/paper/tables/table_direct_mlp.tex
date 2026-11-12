@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\caption{\textsc{WETW} vs.\ a direct MLP in \textsc{WETW-FV}.}
+\label{tab:direct_mlp}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{R@1} & \multicolumn{2}{c}{$\hat d_{ii}/d_{\mathrm{NN}}$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Dataset & \textsc{WETW} & MLP & \textsc{WETW} & MLP \\
+\midrule
+WhaleSounds & \textbf{0.89}\se{0.03} & \textbf{0.89}\se{0.03} & \textbf{0.00} & 0.58 \\
+CornellWhale & \textbf{0.91}\se{0.03} & 0.85\se{0.04} & \textbf{0.00} & 0.49 \\
+AudioMNIST-DS & \textbf{0.98}\se{0.01} & 0.96\se{0.02} & \textbf{0.00} & 0.73 \\
+DREAMER-A & \textbf{0.85}\se{0.04} & 0.84\se{0.04} & \textbf{0.00} & 0.67 \\
+LenDB & \textbf{1.00}\se{0.00} & \textbf{1.00}\se{0.00} & \textbf{0.00} & 0.65 \\
+Seismic & \textbf{0.99}\se{0.01} & 0.98\se{0.01} & \textbf{0.00} & 0.52 \\
+MosquitoSound & \textbf{0.98}\se{0.01} & 0.94\se{0.02} & \textbf{0.00} & 0.62 \\
+FruitFlies & \textbf{0.98}\se{0.01} & 0.96\se{0.02} & \textbf{0.00} & 0.78 \\
+\midrule
+Average & \textbf{0.95}\se{0.01} & 0.93\se{0.01} & \textbf{0.00} & 0.63 \\
+\bottomrule
+\end{tabular*}
+\end{table}

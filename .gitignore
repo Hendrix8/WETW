@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+build/
+dist/
+outputs/
+multirun/
+data/
+checkpoints/
+*.pt
+*.pth
+*.npy
+*.npz
+.DS_Store
+!pretrained/*.pt

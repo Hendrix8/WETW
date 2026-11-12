@@ -1,0 +1,9 @@
+{
+ "key": "neuts_dreamera",
+ "frozen_lab": "abl3_neuts_wd_v2_dreamera",
+ "lab": "er_abl3_neuts_wd_v2_dreamera",
+ "encoder": "selected.pt",
+ "mean_abs_re": 0.11394616042398051,
+ "recall1_2pct": 0.17,
+ "recall10_2pct": 0.11900000000000001
+}

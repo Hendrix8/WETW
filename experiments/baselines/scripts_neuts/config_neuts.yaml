@@ -1,0 +1,38 @@
+# NeuTS Hydra Configuration
+
+system:
+  device: "cuda"
+  seed: 42
+  wandb_project: "dtwrl_baselines"
+  wandb_mode: "online"  # "online", "offline", or "disabled"
+
+dataset:
+  dataset_name: "CBF"
+  dataset_fp: null
+  dim_series: 128
+  warping_window: 0.1
+
+model:
+  dim_emb: 128
+  recurrent_unit: "LSTM"
+  stard_unit: false
+  incell: true
+  grid_delta: 0.001
+  grid_range: [0, 1]
+
+training:
+  lr: 0.001
+  n_epochs: 200
+  batch_size: 32
+  patience: 20
+  sampling_num: 10
+  mail_pre_degree: 16
+  time_limit_hours: 0  # 0 = no limit; set to e.g. 12 for SLURM jobs
+
+evaluation:
+  max_pairs: 1000000
+  rel_error_recenter_scale_from: "none" # "valid" or "none"
+  rel_error_recenter_scale_method: "mean_rel_zero"
+
+paths:
+  exps_dir: "outputs/neuts"
